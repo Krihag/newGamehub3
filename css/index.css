@@ -1,0 +1,215 @@
+header {
+  position: absolute;
+  background: linear-gradient(
+    180deg,
+    #190e41 15.39%,
+    rgba(27, 19, 56, 0.76) 56.97%,
+    rgba(25, 14, 65, 0) 99.45%
+  );
+  height: 21rem;
+}
+
+/* trending games*/
+.trending-container {
+  width: 100%;
+  margin: auto;
+  background: linear-gradient(#2d2267, #403574);
+  padding: 250px 0;
+}
+
+.trending-container h2 {
+  text-transform: uppercase;
+  padding-left: 17.5%;
+  padding-bottom: 2rem;
+  letter-spacing: 0.8px;
+  font-size: 2rem;
+}
+
+.trending-container h2,
+.trending-container i {
+  color: #ebdfff;
+}
+.trending-container article {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.3rem;
+  max-width: 1750px;
+  margin: auto;
+  width: 100%;
+  gap: 1rem;
+  padding: 0 1%;
+  padding-bottom: 100px;
+}
+
+.trending-container i {
+  font-size: 2rem;
+  color: #2d2267;
+  background: #ebdfff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.article-content-and-img {
+  display: flex;
+  width: 1300px;
+  max-width: 100%;
+  gap: 1rem;
+  border-radius: 2rem;
+  /* height: 500px; */
+  background: #ebdfff;
+  /* overflow: hidden; */
+}
+
+.article-content-and-img img {
+  width: 55%;
+  /* max-height: 500px; */
+  object-fit: cover;
+  object-position: 80%;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+  width: 90%;
+  padding: 2rem 1rem 2rem 3rem;
+}
+.article-content p {
+  padding: 1% 0;
+}
+
+.article-content h3 {
+  text-transform: uppercase;
+  color: #2d2267;
+}
+
+.article-content span {
+  font-weight: normal;
+}
+
+.article-description {
+  max-width: 340px;
+}
+
+.article-btns {
+  display: flex;
+  gap: 0.5rem;
+
+  width: 90%;
+}
+
+.article-btns button {
+  padding: 1.2rem 0;
+
+  width: 50%;
+  min-width: 100px;
+  padding-bottom: 20px;
+}
+
+.article-buy {
+  background: linear-gradient(to left, #ff94ce, #f167b2, #ec4ca3);
+  border-style: none;
+  background-size: 150%;
+  transition: 0.4s;
+}
+
+.article-buy:hover {
+  background-position: right;
+}
+
+.article-read {
+  border: 0.5px solid #190e41;
+  background: transparent;
+}
+
+/* slide */
+.trending-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.article-slider-container {
+  scroll-behavior: smooth;
+  display: flex;
+  position: relative;
+
+  width: 300%;
+}
+
+.article-slide {
+  max-width: 100%;
+  position: relative;
+  width: 1600px;
+  padding: 0% 0% 5%;
+}
+
+section {
+  padding: 13% 0;
+}
+.bestsellers-section {
+  background: #ebdfff;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.bestsellers-section h2 {
+  font-size: 2.2rem;
+}
+
+/*BIG SALE SECTION */
+.sale-section {
+  background: linear-gradient(#2d2267, #403574);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 3rem;
+}
+
+.sale-section h3 {
+  font-size: 2rem;
+  /* color: #ebdfff;
+  padding-left: 320px; */
+}
+.sale-main-container {
+  background: #ebdfff;
+  max-width: 1400px;
+  width: 90%;
+  display: flex;
+  height: 50vh;
+  border-radius: 3rem;
+  margin: auto;
+}
+
+.sale-content-container {
+  text-align: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  /* font-weight: bold; */
+}
+
+/* .sale-number-games {
+  font-size: 1.7rem;
+} */
+
+.sale-content-container button {
+  padding: 1.7rem;
+  max-width: 350px;
+  width: 95%;
+  align-self: center;
+  background: #ec4ca3;
+  color: #2d2267;
+  font-size: 1.5rem;
+  border: none;
+}

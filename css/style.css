@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #190e41;
+  background: #9890b6;
   width: 100%;
   margin: auto;
   max-width: 2000px;
@@ -27,6 +27,7 @@ button {
 a {
   text-decoration: none;
 }
+
 .button {
   color: #2d2267;
   border-radius: 0.8rem;
@@ -34,15 +35,19 @@ a {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.15rem;
+  padding: 1.1rem 2.5rem;
 }
 
 .semi-bold {
   font-weight: 600;
 }
 
+.pink-bottom-border {
+  border-bottom: 3px solid #ec4ca3;
+}
+
 /* HEADER */
 header {
-  position: absolute;
   z-index: 999;
   width: 2000px;
   max-width: 100%;
@@ -58,18 +63,14 @@ header {
 .login-and-search {
   justify-content: right;
   gap: 1.5rem;
-  background: #190e41;
+  /* background: #190e41; */
 }
 
 .logo-and-pages {
   justify-content: space-between;
-  background: linear-gradient(
-    180deg,
-    #190e41 5.39%,
-    rgba(25, 14, 65, 0.76) 35.97%,
-    rgba(25, 14, 65, 0) 99.45%
-  );
-  height: 16rem;
+
+  display: flex;
+  align-items: center;
 }
 
 .nav-pages {
@@ -262,192 +263,107 @@ header nav a {
   color: #ebdfff;
 } */
 
-/* trending games*/
-.trending-container {
-  width: 100%;
-  margin: auto;
-  background: linear-gradient(#2d2267, #403574);
-  padding-top: 100px;
-}
-
-.trending-container h2 {
-  text-transform: uppercase;
-  padding-left: 17.5%;
-  padding-bottom: 2rem;
-  letter-spacing: 0.8px;
-  font-size: 2rem;
-}
-
-.trending-container h2,
-.trending-container i {
-  color: #ebdfff;
-}
-.trending-container article {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 1.3rem;
-  max-width: 1750px;
-  margin: auto;
-  width: 100%;
-  gap: 1rem;
-  padding: 0 1%;
-  padding-bottom: 100px;
-}
-
-.trending-container i {
-  font-size: 2rem;
-  color: #2d2267;
-  background: #ebdfff;
-  padding: 0.8rem 1.2rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.article-content-and-img {
-  display: flex;
-  width: 1300px;
-  max-width: 100%;
-  gap: 1rem;
-  border-radius: 2rem;
-  /* height: 500px; */
-  background: #ebdfff;
-  /* overflow: hidden; */
-}
-
-.article-content-and-img img {
-  width: 55%;
-  /* max-height: 500px; */
-  object-fit: cover;
-  object-position: 80%;
-  border-radius: 1rem 0 0 1rem;
-}
-
-.article-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.3rem;
-  width: 90%;
-  padding: 2rem 1rem 2rem 3rem;
-}
-.article-content p {
-  padding: 1% 0;
-}
-
-.article-content h3 {
-  text-transform: uppercase;
-  color: #2d2267;
-}
-
-.article-content span {
-  font-weight: normal;
-}
-
-.article-description {
-  max-width: 340px;
-}
-
-.article-btns {
-  display: flex;
-  gap: 0.5rem;
-
-  width: 90%;
-}
-
-.article-btns button {
-  padding: 1.2rem 0;
-
-  width: 50%;
-  min-width: 100px;
-  padding-bottom: 20px;
-}
-
-.article-buy {
-  background: linear-gradient(to left, #ff94ce, #f167b2, #ec4ca3);
-  border-style: none;
-  background-size: 150%;
-  transition: 0.4s;
-}
-
-.article-buy:hover {
-  background-position: right;
-}
-
-.article-read {
-  border: 0.5px solid #190e41;
-  background: transparent;
-}
-
-/* slide */
-.trending-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.article-slider-container {
-  scroll-behavior: smooth;
-  display: flex;
-  position: relative;
-
-  width: 300%;
-}
-
-.article-slide {
-  max-width: 100%;
-  position: relative;
-  width: 1600px;
-  padding: 0% 0% 5%;
-}
-
 .hidden {
   visibility: hidden;
 }
 
 /* best sellers */
 
-.bestsellers-section {
-  background: #ebdfff;
-  padding: 5% 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  align-items: center;
-}
-
-.bestsellers-section h2 {
-  font-size: 2.2rem;
-}
-
-.bestseller-container {
+.games-container {
   display: flex;
 
-  gap: 1.5rem;
-
+  gap: 2.5rem;
+  width: 90%;
   flex-wrap: wrap;
   max-width: 1400px;
 }
 
 .game-cover {
-  background: #403574;
-  border: 8px solid transparent;
-  border-radius: 1rem;
+  background: #2d2267;
+  /* border: 0.4rem solid transparent; */
+  padding: 0.7rem 0.5rem;
+  border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border: 2px solid #8c889e;
+  position: relative;
+}
+
+.game-cover:hover {
+  /* border-color: #ec4ca3; */
+  transition-duration: 0.4s;
 }
 
 .game-cover img {
   width: 300px;
-  height: 370px;
+  height: 340px;
   object-fit: cover;
+  object-position: 0 80%;
+  border-radius: 0.3rem 0.3rem 0 0;
+  border: 0.5px solid #251a57;
+  border-bottom: none;
+}
+
+.on-sale::before {
+  content: "Sale";
+  position: absolute;
+  top: -3%;
+  left: -3%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: linear-gradient(to left, #020a01, #0f751b, #488054);
+  color: #ebdfff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5px solid #1d6623; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  line-height: 1.2rem;
+}
+
+.on-sale::after {
+  content: attr(data-before);
+  font-family: "DM Sans", sans-serif;
+  position: absolute;
+  top: 71.5%;
+  left: 56.7%;
+  width: 8rem;
+  height: 3rem;
+
+  border-top-left-radius: 5%;
+  background: linear-gradient(to left, #1d0503, #b21d0e, #210b0a);
+  color: #ebdfff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 0.5px solid #1d6623; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  line-height: 1.2rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size: 90%;
+  color: #c44545;
+}
+
+.price-tag {
+  font-weight: bold;
 }
 
 .game-content {
   display: flex;
   justify-content: space-between;
   padding: 0.4rem 1.5rem;
-  color: #fff;
+  color: #ebdfff;
   font-size: 1.2rem;
   gap: 1rem;
   max-width: 300px;
@@ -461,7 +377,7 @@ header nav a {
 }
 
 .see-all-games {
+  color: #2d2267;
   text-transform: uppercase;
   font-size: 1.3rem;
-  border-bottom: 3px solid #ec4ca3;
 }

@@ -14,8 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Raleway:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script defer type="module" src="src/index.js"></script>
+    <!-- <link rel="parallax" href="css/index.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header class="hide">
@@ -27,13 +29,13 @@
         </ul>
       </nav>
       <nav class="logo-and-pages">
-        <figure class="logo">
+        <a href="index.html" class="logo">
           <img src="./img/gamehub-logo.png" alt="gamehub logo" />
-        </figure>
+        </a>
         <ul class="nav-pages">
-          <li><a href="#">Games</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">About us</a></li>
+          <li><a href="/html/games.html">Games</a></li>
+          <li><a href="/html/contact.html">Contact</a></li>
+          <li><a href="/html/about.html">About us</a></li>
         </ul>
       </nav>
     </header>
@@ -112,14 +114,14 @@
           data-speedz="0.055"
           class="parallax flying-turtle"
         />
-        <img
+        <!-- <img
           src="/img/star.png"
           data-speedx="0.20"
           data-speedy="0.18"
           data-speedz="0.06"
           data-scroll="0.105"
           class="parallax star1"
-        />
+        /> -->
         <img
           src="/img/planet-green.png"
           data-speedx="0.20"
@@ -142,14 +144,14 @@
           data-speedz="0.14"
           class="parallax peach"
         />
-        <img
+        <!-- <img
           src="/img/star.png"
           data-speedx="0.15"
           data-speedy="0.13"
           data-speedz="0.16"
           data-scroll="0.115"
           class="parallax star2"
-        />
+        /> -->
         <img
           src="/img/big-boo.png"
           data-speedx="0.12"
@@ -193,14 +195,14 @@
           data-speedz="0.32"
           class="parallax luigi"
         />
-        <img
+        <!-- <img
           src="/img/star.png"
           data-speedx="0.05"
           data-speedy="0.04"
           data-speedz="0.38"
           data-scroll="0.14"
           class="parallax star3"
-        />
+        /> -->
         <img
           src="/img/toad.png"
           data-speedx="0.03"
@@ -314,14 +316,28 @@
       <section class="bestsellers-section">
         <div class="header-and-see-more">
           <h2>Bestsellers</h2>
-          <a href="#" class="see-all-games semi-bold">all games</a>
+          <a href="#" class="see-all-games semi-bold pink-bottom-border"
+            >all games</a
+          >
         </div>
         <div class="bestseller-container games-container">
           <!-- GAME -->
         </div>
       </section>
+      <section class="sale-section">
+        <article class="sale-main-container">
+          <div class="sale-content-container">
+            <h3>now: big sale</h3>
+            <p class="sale-number-games">1000+ games</p>
+            <p class="semi-bold">UP TO 80% DISCOUNT</p>
+            <button class="button">go to sale</button>
+          </div>
+          <div class="sale-img-container"></div>
+        </article>
+      </section>
     </main>
 
     <script type="module" defer src="src/script.js"></script>
+    <script type="module" defer src="src/index.js"></script>
   </body>
 </html>
