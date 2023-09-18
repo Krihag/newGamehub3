@@ -82,7 +82,7 @@ articleSlides.forEach((slide, i) => {
 // bestsellers
 
 for (let i = 0; i < 4; i++) {
-  smallGame(games[i], bestSellers);
+  smallGame(games[i], bestSellers, true);
 }
 // window.addEventListener("scroll", () => {
 //   let newValue = window.scrollY * 0.1;

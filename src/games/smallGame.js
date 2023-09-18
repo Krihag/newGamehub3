@@ -1,7 +1,8 @@
-export default function smallGame(game, container) {
+export default function smallGame(game, container, homePage = false) {
   const gameContainer = document.createElement("a");
   gameContainer.classList.add("game-cover");
-  gameContainer.href = `description.html?id=${game.id}`;
+  if (homePage) gameContainer.href = `HTML/description.html?id=${game.id}`;
+  else gameContainer.href = `description.html?id=${game.id}`;
 
   const gameImg = document.createElement("img");
   gameImg.src = game.image;
