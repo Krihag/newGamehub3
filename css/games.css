@@ -80,6 +80,7 @@ header {
 
 .article-buy {
   background: #ec4ca3;
+  border: none;
 }
 
 .article-buy:hover {

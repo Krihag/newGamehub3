@@ -312,9 +312,10 @@ header nav a {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: linear-gradient(to left, #020a01, #0f751b, #488054);
-  color: #ebdfff;
-  font-weight: 600;
+  /* background: linear-gradient(to left, #cf17cf, #ec4c7f, #d33db0); */
+  background: #ec4ca3;
+  color: #251a57;
+  font-weight: 800;
   text-transform: uppercase;
   font-size: 1.1rem;
   display: flex;
@@ -324,20 +325,23 @@ header nav a {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   line-height: 1.2rem;
+  letter-spacing: 2.5px;
 }
 
 .on-sale::after {
   content: attr(data-before);
   font-family: "DM Sans", sans-serif;
   position: absolute;
-  top: 71.5%;
+  top: 71.1%;
   left: 56.7%;
   width: 8rem;
   height: 3rem;
 
   border-top-left-radius: 5%;
-  background: linear-gradient(to left, #1d0503, #b21d0e, #210b0a);
-  color: #ebdfff;
+  /* background: linear-gradient(to left, #a624c0, #b12de5, #b140ee); */
+  background: #a3ec4c;
+
+  color: #251a57;
   font-weight: 700;
   font-size: 1.3rem;
   display: flex;
@@ -352,7 +356,7 @@ header nav a {
 .old-price {
   text-decoration: line-through;
   font-size: 90%;
-  color: #c44545;
+  color: #e71e8b;
 }
 
 .price-tag {
