@@ -1,0 +1,101 @@
+.game-description-section {
+  background: #9163de;
+  height: 100vh;
+}
+
+.description-top-half {
+  background: url("../img/game-details-background.jpg") no-repeat;
+
+  background-size: initial;
+
+  height: 100%;
+  padding: 10rem 0 0;
+}
+
+.image-and-details {
+  width: 900px;
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 4rem;
+}
+
+.game-img {
+  max-width: 350px;
+  transform: rotate(-6deg);
+  border: 6px solid #3fa535;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.header-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 370px;
+  font-size: 1.3rem;
+}
+.header-text {
+  font-size: 2.2rem;
+}
+.header-description {
+  line-height: 1.8rem;
+}
+
+.header-details button {
+  font-size: 1.1rem;
+}
+
+.quantity-and-device {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* text-transform: lowercase; */
+}
+
+.quantity-container,
+.device-container {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.quantity-container input {
+  width: 3rem;
+  height: 1.9rem;
+  border: 0.1px solid #555;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.device-container button {
+  padding: 0.5rem 1rem;
+
+  background: #ebdfff;
+  font-weight: 500;
+  border: 0.5px solid #2d2267;
+  color: #2d2267;
+  border-radius: 0.5rem;
+}
+
+.buy-now-btn {
+  padding: 1rem;
+
+  width: 170px;
+  background: #ec4ca3;
+  font-weight: bold;
+  border: none;
+  color: #2d2267;
+  border-radius: 0.8rem;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.semi-bold span {
+  font-weight: 400;
+}

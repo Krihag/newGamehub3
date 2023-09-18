@@ -1,0 +1,59 @@
+*,
+*::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 2000px;
+  margin: auto;
+
+  max-width: 2000px;
+  font-family: "Raleway", sans-serif;
+  color: #2d2267;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+button {
+  font-family: "DM Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #ebdfff;
+}
+
+li {
+  list-style: none;
+}
+
+header,
+nav,
+nav ul {
+  display: flex;
+}
+
+header {
+  background: linear-gradient(#190e41, #4a3587);
+  padding: 2rem 4rem;
+
+  justify-content: space-between;
+}
+
+nav {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+nav ul {
+  gap: 1.5rem;
+  font-size: 1.3rem;
+}
