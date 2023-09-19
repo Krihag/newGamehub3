@@ -19,7 +19,7 @@ const character2 = {
 };
 
 const character3 = {
-  name: "Valotz",
+  name: "Valor",
   id: 3,
   profession: "Fighter",
   description: `Introducing Valor, the formidable Fighter of the battlefield! With unwavering determination, Valor wields his mighty weapon to unleash devastating neon blue strikes, striking fear into his adversaries as they witness the raw power and precision of his combat prowess.`,
