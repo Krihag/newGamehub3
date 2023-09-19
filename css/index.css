@@ -6,7 +6,9 @@ header {
     rgba(27, 19, 56, 0.76) 56.97%,
     rgba(25, 14, 65, 0) 99.45%
   );
-  height: 21rem;
+  height: 16rem;
+  width: 100%;
+  max-width: 2000px;
 }
 
 /* trending games*/
@@ -186,6 +188,7 @@ section {
   height: 50vh;
   border-radius: 3rem;
   margin: auto;
+  overflow: none;
 }
 
 .sale-content-container {
@@ -212,4 +215,16 @@ section {
   color: #2d2267;
   font-size: 1.5rem;
   border: none;
+}
+
+.sale-img-container {
+  background: url("/img/jinx1.jpg") no-repeat;
+
+  width: 60%;
+  background-size: cover;
+  border-radius: 0 3rem 3rem 0;
+}
+
+.cyber-characters {
+  background: url(/img/redSmoke.png);
 }

@@ -22,8 +22,12 @@ startChat.addEventListener("click", async function (e) {
   const lowerCaseName = nameInput.value;
   const username =
     lowerCaseName.charAt(0).toUpperCase() + lowerCaseName.slice(1);
-  let chatBotName = "ChatBot";
+  let chatBotName = "Michael";
   chatBox.innerHTML = "";
+
+  // if (username === "Truls") {
+  //   chatBotName = "Ole";
+  // }
 
   const displayedName = document.createElement("div");
   displayedName.classList.add("chat-bot-name");
@@ -76,4 +80,19 @@ startChat.addEventListener("click", async function (e) {
       chatBox.append(chatEnd, endChatBtn);
     }, 14000);
   });
+});
+
+const footerBtn = document.querySelector(".subscribe-button");
+const footerInput = document.querySelector(".footer-input");
+const newsText = document.querySelector(".newsletter-subtext");
+
+footerBtn.addEventListener("click", function (e) {
+  const inputVal = footerInput.value;
+  footerInput.style.display = "none";
+
+  footerBtn.style.width = "100%";
+  footerBtn.textContent = "You are now subscribed";
+  footerBtn.style.background = "#a3ec4c";
+  newsText.textContent = `Confirmation email will be sent to: ${inputVal}`;
+  footerBtn.style.transition = ".5s ease-in";
 });

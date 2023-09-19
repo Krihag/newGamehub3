@@ -175,3 +175,97 @@ h3,
 .choose-category {
   font-weight: normal;
 }
+
+/* CYBERPUNK game*/
+.cyberpunk-section {
+  background: url(/img/background-cyber.jpg) no-repeat;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  align-items: end;
+}
+
+.arrows-and-chars {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 80%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+  height: 100%;
+  width: 60%;
+  position: relative;
+}
+.arrows-pick {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+
+  width: 100%;
+}
+
+.neon-pink {
+  background: linear-gradient(180deg, #fa67ac 0%, #ffb1d6 100%);
+  filter: drop-shadow(0px 0px 15px #fa67ac);
+}
+
+.neon-green {
+  background: linear-gradient(180deg, #52ff00 0%, #9dff6f 100%);
+  filter: drop-shadow(0px 0px 15px #52ff00);
+}
+
+.neon-blue {
+  background: linear-gradient(180deg, #00cfff 0%, #9cecff 100%);
+  filter: drop-shadow(0px 0px 15px #00cfff);
+}
+
+.arrows-pick i {
+  color: #2d2267;
+  font-size: 2.2rem;
+  /* background: linear-gradient(180deg, #00cfff 0%, #9cecff 100%);
+  filter: drop-shadow(0px 0px 15px #00cfff); */
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cyber-characters {
+}
+
+.cyber-char {
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  opacity: 0;
+}
+
+.cyberpunk-2 {
+  left: -2.5rem;
+}
+
+.cyberpunk-3 {
+  left: -0.5rem;
+}
+
+.active {
+  opacity: 1;
+}
+
+.cyberpunk-main-container {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: 430px;
+  color: #ebdfff;
+  font-size: 1.3rem;
+}

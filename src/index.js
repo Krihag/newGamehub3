@@ -5,7 +5,6 @@ const parallaxEl = document.querySelectorAll(".parallax");
 const main = document.querySelector(".parallax-container");
 const bestSellers = document.querySelector(".bestseller-container");
 const articleSlides = document.querySelectorAll(".article-slide");
-const flyingMario = document.querySelector(".flying-mario");
 
 let x = 0;
 let y = 0;
@@ -79,13 +78,8 @@ articleSlides.forEach((slide, i) => {
   ).textContent = `$${featuredGames[i].discountedPrice}`;
 });
 
-// bestsellers
+// BESTSELLERS
 
 for (let i = 0; i < 4; i++) {
   smallGame(games[i], bestSellers, true);
 }
-// window.addEventListener("scroll", () => {
-//   let newValue = window.scrollY * 0.1;
-
-//   flyingMario.style.left = newValue - 20 + "%";
-// });
