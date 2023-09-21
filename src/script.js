@@ -12,6 +12,28 @@ chatIcon.addEventListener("click", function () {
   chatIcon.classList.toggle("hide-item");
 });
 
+const Ove = {
+  name: "Ove",
+  firstText: "I am not interested in talking to you Human. Begone pest!",
+  secondText: "I am warning you, do not talk to me, I will bite!",
+
+  bites: function () {},
+  closeChat: false,
+};
+const namesArray = [
+  Ove, // 0
+  "Lisa", // 1
+  "Michael", // 2
+  "Steve", // 3
+  "Megan", // 4
+  "Stephanie", // 5
+  "Lasse", // 6
+];
+
+const randomNumber = Math.floor(Math.random() * namesArray.length);
+
+const randomName = namesArray[0];
+
 closeChat.addEventListener("click", function () {
   chatBoxContainer.classList.toggle("hide-item");
   chatIcon.classList.toggle("hide-item");
@@ -22,16 +44,13 @@ startChat.addEventListener("click", async function (e) {
   const lowerCaseName = nameInput.value;
   const username =
     lowerCaseName.charAt(0).toUpperCase() + lowerCaseName.slice(1);
-  let chatBotName = "Michael";
-  chatBox.innerHTML = "";
 
-  // if (username === "Truls") {
-  //   chatBotName = "Ole";
-  // }
+  let chatBot = randomName;
+  chatBox.innerHTML = "";
 
   const displayedName = document.createElement("div");
   displayedName.classList.add("chat-bot-name");
-  displayedName.textContent = `Chatting with: ${chatBotName}`;
+  displayedName.textContent = `Chatting with: ${chatBot.name}`;
 
   const chatTextContainer = document.createElement("div");
   chatTextContainer.classList.add("chat-text-container");
@@ -39,7 +58,7 @@ startChat.addEventListener("click", async function (e) {
   const chatTextOne = document.createElement("div");
   chatTextContainer.append(chatTextOne);
 
-  chatTextOne.textContent = `${chatBotName} is typing...`;
+  chatTextOne.textContent = `${chatBot.name} is typing...`;
 
   const questionInput = document.createElement("textarea");
   questionInput.classList.add("chat-question-box");
@@ -51,7 +70,7 @@ startChat.addEventListener("click", async function (e) {
 
   chatBox.append(displayedName, chatTextContainer, questionInput, sendBtn);
   setTimeout(() => {
-    chatTextOne.textContent = `${chatBotName}: Hello ${username}, my name is ${chatBotName}. What can I help you with?`;
+    chatTextOne.textContent = chatBot.firstText;
   }, 5000);
 
   sendBtn.addEventListener("click", function () {
@@ -63,11 +82,11 @@ startChat.addEventListener("click", async function (e) {
     const newAnswer = document.createElement("div");
     chatTextContainer.append(questionOne, newAnswer);
     setTimeout(
-      () => (newAnswer.textContent = `${chatBotName} is typing...`),
+      () => (newAnswer.textContent = `${chatBot.name} is typing...`),
       1200
     );
     setTimeout(() => {
-      newAnswer.textContent = `${chatBotName}: Thanks for your inquery. My colleague will call you within 5-10 minutes for further assistance..`;
+      newAnswer.textContent = chatBot.secondText;
       const chatEnd = document.createElement("div");
       chatEnd.textContent = "Chat has ended..";
 

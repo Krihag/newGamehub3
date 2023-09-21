@@ -179,35 +179,37 @@ h3,
 /* CYBERPUNK game*/
 .cyberpunk-section {
   background: url(/img/background-cyber.jpg) no-repeat;
-  width: 100%;
-  height: 80vh;
+  max-width: 100%;
+  height: 1050px;
   background-size: cover;
   background-position: center;
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  padding: 0 10%;
+  justify-content: center;
+  padding: 0 0.5rem;
   align-items: end;
+  gap: 4rem;
 }
 
 .arrows-and-chars {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 20% 80%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 10%;
-  height: 100%;
-  width: 60%;
+
+  max-width: 100%;
+
   position: relative;
+  height: 100%;
 }
 .arrows-pick {
   justify-self: center;
   display: flex;
-  justify-content: center;
-  gap: 3rem;
+  justify-content: space-between;
 
-  width: 100%;
+  width: 250px;
+
+  max-width: 35%;
 }
 
 .neon-pink {
@@ -236,36 +238,84 @@ h3,
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .cyber-characters {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
 }
 
 .cyber-char {
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  /* position: absolute; */
+  /* top: 50%; */
   left: 2rem;
+  display: none;
   opacity: 0;
+
+  max-width: 100%;
 }
 
 .cyberpunk-1 {
-  left: 5rem;
+  left: 2.5rem;
 }
 
 .cyberpunk-2 {
+  left: -1rem;
+}
+
+.cyberpunk-3 {
   left: -0.5rem;
 }
 
 .active {
-  opacity: 1;
+  display: flex;
+  animation: changeChar ease-in-out 0.9s 1 normal forwards;
+}
+
+@keyframes changeChar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .cyberpunk-main-container {
+  padding-top: 100px;
   align-self: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
-  width: 430px;
+  justify-content: space-between;
+  width: 40%;
+  max-width: 500px;
   color: #ebdfff;
   font-size: 1.3rem;
+  height: 50%;
+  font-size: 1.5rem;
+  /* background: #000; */
+}
+
+.cyber-name {
+  font-family: "Rock Salt", sans-serif;
+  display: inline-block;
+}
+
+.cyber-description {
+  padding-bottom: 2rem;
+}
+
+.cyber-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+}
+
+.cyber-btns .cyber-read {
+  background: transparent;
+  color: #ebdfff;
+  border: 2px solid #3fa535;
 }

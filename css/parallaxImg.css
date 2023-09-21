@@ -165,3 +165,66 @@
 .hidden {
   visibility: hidden;
 }
+
+@media (max-width: 725px) {
+  .meteor-2 {
+    display: none;
+  }
+
+  .meteor-1 {
+    display: none;
+  }
+
+  .sonic {
+    display: none;
+  }
+
+  .planet-green {
+    display: none;
+  }
+  .diddy-kong {
+    display: none;
+  }
+
+  .koopa1 {
+    display: none;
+  }
+
+  .koopa2 {
+    display: none;
+  }
+
+  .fog8 {
+    display: none;
+  }
+
+  .flying-turtle {
+    display: none;
+  }
+
+  .koopa3 {
+    width: 17%;
+    left: 5%;
+  }
+
+  .big-boo {
+    width: 25%;
+    left: 90%;
+  }
+
+  .wario {
+    width: 40%;
+    left: 9%;
+  }
+  .toad {
+    width: 65%;
+    left: 70%;
+  }
+  .peach {
+    width: 35%;
+  }
+
+  .luigi {
+    width: 30%;
+  }
+}

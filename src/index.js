@@ -3,6 +3,7 @@ import smallGame from "./games/smallGame.js";
 
 const parallaxEl = document.querySelectorAll(".parallax");
 const main = document.querySelector(".parallax-container");
+const backgroundImg = document.querySelector(".bg-img");
 const bestSellers = document.querySelector(".bestseller-container");
 const articleSlides = document.querySelectorAll(".article-slide");
 
@@ -34,11 +35,12 @@ window.addEventListener("mousemove", function (e) {
 });
 
 main.style.maxHeight = `${window.innerWidth * 0.6}px`;
-// if (window.innerWidth >= 725) {
-//   main.style.maxHeight = `${window.innerWidth * 0.6}px`;
-// } else {
-//   main.style.maxHeight = `${window.innerWidth * 1.4}px`;
-// }
+if (window.innerWidth >= 725) {
+  main.style.maxHeight = `${window.innerWidth * 0.6}px`;
+} else {
+  main.style.maxHeight = `${window.innerWidth * 1.4}px`;
+  backgroundImg.src = "../img/background-mobile.jpg";
+}
 
 // TRENDING GAMES
 

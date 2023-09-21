@@ -97,7 +97,7 @@ function nextSlide() {
 
 function startSlider() {
   showSlide(currentIndex);
-  setInterval(nextSlide, 10000); // Change image every 5 seconds (5000 milliseconds)
+  setInterval(nextSlide, 10000);
 }
 
 startSlider();
@@ -124,15 +124,7 @@ const buyBtn = document.querySelector(".cyber-buy-btn");
 const charDesc = document.querySelector(".cyber-description");
 const charName = document.querySelector(".cyber-name");
 
-characters.forEach((character) => {
-  if (character.active) {
-    leftArrow.classList.toggle(character.className);
-    rightArrow.classList.toggle(character.className);
-    buyBtn.style.background = character.btnColor;
-    charName.textContent = character.name;
-    charDesc.textContent = character.description;
-  }
-});
+updateCharacters(characters[0]);
 let newNum = 0;
 
 leftArrow.addEventListener("click", (e) => {
@@ -143,7 +135,7 @@ leftArrow.addEventListener("click", (e) => {
   const allChars = document.querySelectorAll(".cyber-char");
 
   const oldChar = characters[oldNum];
-  oldChar.active = false;
+
   let newNum;
 
   if (oldNum == 0) {

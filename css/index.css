@@ -16,7 +16,7 @@ header {
   width: 100%;
   margin: auto;
   background: linear-gradient(#2d2267, #403574);
-  padding: 250px 0;
+  /* padding: 250px 0; */
 }
 
 .trending-container h2 {
@@ -40,8 +40,7 @@ header {
   margin: auto;
   width: 100%;
   gap: 1rem;
-  padding: 0 1%;
-  padding-bottom: 100px;
+  padding: 0 1% 1%;
 }
 
 .trending-container i {
@@ -60,7 +59,6 @@ header {
   border-radius: 2rem;
   /* height: 500px; */
   background: #ebdfff;
-  /* overflow: hidden; */
 }
 
 .article-content-and-img img {
@@ -149,7 +147,7 @@ header {
 }
 
 section {
-  padding: 13% 0;
+  padding: 10% 0;
 }
 .bestsellers-section {
   background: #ebdfff;
@@ -185,7 +183,7 @@ section {
   max-width: 1400px;
   width: 90%;
   display: flex;
-  height: 50vh;
+  height: 570px;
   border-radius: 3rem;
   margin: auto;
   overflow: none;
@@ -227,4 +225,24 @@ section {
 
 .cyber-characters {
   background: url(/img/redSmoke.png);
+}
+@media (max-width: 1600px) {
+  .article-content-and-img {
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+  }
+
+  .article-content-and-img img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .trending-container article {
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .bestsellers-section > * {
+    max-width: 680px;
+  }
 }
