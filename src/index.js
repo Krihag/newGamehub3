@@ -1,10 +1,13 @@
 import fetchGames from "./games/fetchGames.js";
 import smallGame from "./games/smallGame.js";
+import chat from "./chat/chat.js";
 
 const parallaxEl = document.querySelectorAll(".parallax");
 const main = document.querySelector(".parallax-container");
 const backgroundImg = document.querySelector(".bg-img");
-const bestSellers = document.querySelector(".bestseller-container");
+const [bestSellers, newGamesContainer] = document.querySelectorAll(
+  ".bestseller-container"
+);
 const articleSlides = document.querySelectorAll(".article-slide");
 
 let x = 0;
@@ -65,8 +68,11 @@ rightBtns.forEach((btn) =>
     console.log(e.target.parentElement.parentElement);
   })
 );
+const forge = games.find((game) => game.title == "Forge Legend");
+const racing = games.find((game) => game.title == "Racing");
+const cyberPunk = games.find((game) => game.title == "Cyberpunk");
 
-const featuredGames = [games[3], games[4], games[6]];
+const featuredGames = [forge, racing, cyberPunk];
 
 articleSlides.forEach((slide, i) => {
   slide.querySelector("h3").textContent = featuredGames[i].title;
@@ -85,3 +91,9 @@ articleSlides.forEach((slide, i) => {
 for (let i = 0; i < 4; i++) {
   smallGame(games[i], bestSellers, true);
 }
+// NEW GAMES
+for (let i = 4; i < 8; i++) {
+  smallGame(games[i], newGamesContainer, true);
+}
+
+chat();

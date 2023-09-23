@@ -14,6 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Raleway:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="../css/style.css" />
 
@@ -41,7 +47,35 @@
       </nav>
     </header>
     <main>
-      <h1 data-value="contact us">contact us</h1>
+      <section class="contact-section">
+        <div class="contact-text">
+          <h1 class="contact-us-text">Contact info</h1>
+          <p>If you have any questions please contact us:</p>
+          <div>
+            <p><span>Phone: </span>+47 987 654 32</p>
+            <p><span>Email: </span>support@gamehub.com</p>
+          </div>
+          <p>
+            Or use or contact form / chat bot. Our chatbot is available all day
+            and night, but it can’t review cases with personal information, card
+            details or tracking information.
+          </p>
+        </div>
+        <form class="contact-form">
+          <h2>Contact</h2>
+          <input type="text" placeholder="Name:" required />
+          <input type="email" name="email" placeholder="E-mail:" required />
+          <textarea
+            name=""
+            id=""
+            cols="25"
+            rows="10"
+            placeholder="Message:"
+            required
+          ></textarea>
+          <button class="button">Send</button>
+        </form>
+      </section>
     </main>
   </body>
 </html>

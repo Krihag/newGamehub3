@@ -66,9 +66,34 @@ header {
   color: #ebdfff;
   max-width: 500px;
 }
+.genre-and-price {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* font-size: 1.6rem; */
+}
 
-.slide-title {
-  /* color: #ff83c7; */
+.genre-and-price p {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  max-width: 200px;
+  align-items: center;
+  justify-content: center;
+}
+.genre-and-price span {
+  font-weight: normal;
+  background: rgba(0, 0, 0, 0.49);
+  padding: 0.7rem;
+  width: 100px;
+  border-radius: 1rem;
+  margin: 0;
+}
+
+.slide-price {
+  margin-top: 1rem;
+  display: inline-block;
 }
 
 .slider-btns button {
@@ -107,9 +132,6 @@ header {
   align-items: center;
   justify-content: center;
   padding: 12rem 2%;
-}
-
-.games-container {
 }
 
 /* CATEGORY */
@@ -180,14 +202,14 @@ h3,
 .cyberpunk-section {
   background: url(/img/background-cyber.jpg) no-repeat;
   max-width: 100%;
-  height: 1050px;
+  /* height: 1050px; */
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
-  padding: 0 0.5rem;
+  padding: 0 1.5rem 0 0;
   align-items: end;
-  gap: 4rem;
+  gap: 0.5rem;
 }
 
 .arrows-and-chars {

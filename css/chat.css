@@ -14,11 +14,12 @@
 .chat-box-container {
   height: 35rem;
   width: 25rem;
-  background: #fff;
+  background: #ebdfff;
   display: flex;
   flex-direction: column;
   padding: 1rem 1.5rem;
   border: 2px solid #2d2267;
+  border-radius: 0.5rem;
 }
 .fa-xmark {
   color: #2d2267;
@@ -35,16 +36,36 @@
   gap: 1.2rem;
 }
 
+.chat-welcome-text {
+  font-size: 1.7rem;
+  /* text-transform: uppercase; */
+  padding-bottom: 30px;
+}
+
+.chat-details label {
+}
 .chat-details input {
+  margin-top: 0.5rem;
   padding: 0.5rem;
   width: 100%;
 
   font-size: 1.2rem;
+  border-radius: 0.25rem;
+  border: 0.5px solid #2d2267;
+  outline-color: #2d2267;
+}
+
+.chat-box-container button {
+  font-size: 1.2rem;
+  padding: 1rem;
+  width: 60%;
+  background: #ec4ca3;
+  border: none;
+  border-radius: 1rem;
 }
 
 .start-chat-btn {
-  font-size: 1.2rem;
-  padding: 0.5rem 2rem;
+  margin-top: 2rem;
 }
 
 .chat-bot-name {

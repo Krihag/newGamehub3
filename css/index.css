@@ -149,7 +149,8 @@ header {
 section {
   padding: 10% 0;
 }
-.bestsellers-section {
+.bestsellers-section,
+.new-games-section {
   background: #ebdfff;
 
   display: flex;
@@ -160,7 +161,8 @@ section {
   align-items: center;
 }
 
-.bestsellers-section h2 {
+.bestsellers-section h2,
+.new-games-section h2 {
   font-size: 2.2rem;
 }
 
@@ -194,15 +196,31 @@ section {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: 1.7rem;
-  text-transform: uppercase;
+  padding: 4rem 0;
+
   /* font-weight: bold; */
 }
 
-/* .sale-number-games {
-  font-size: 1.7rem;
-} */
+.sale-text-container {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 300px;
+  margin: auto;
+  line-height: 2.4rem;
+}
+
+.sale-discount-text {
+  margin-bottom: 3rem;
+}
+
+.sale-number-games span {
+  color: #ec4ca3;
+  font-weight: 700;
+  font-family: "dm sans";
+}
 
 .sale-content-container button {
   padding: 1.7rem;
@@ -223,9 +241,6 @@ section {
   border-radius: 0 3rem 3rem 0;
 }
 
-.cyber-characters {
-  background: url(/img/redSmoke.png);
-}
 @media (max-width: 1600px) {
   .article-content-and-img {
     flex-direction: column;

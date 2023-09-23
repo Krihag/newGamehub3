@@ -10,7 +10,11 @@ const categoryHeader = document.querySelector(".category-header");
 
 const games = await fetchGames();
 
-const sliderGames = [games[0], games[1], games[8]];
+const boxer = games.find((game) => game.title == "Boxer");
+let spaceWar = games.find((game) => game.title == "Space War");
+let assassin = games.find((game) => game.title == "Assassin");
+
+const sliderGames = [boxer, spaceWar, assassin];
 
 const allSlides = sliderGames.map((game, i) => {
   const slideMainContainer = document.createElement("article");
@@ -50,11 +54,12 @@ const allSlides = sliderGames.map((game, i) => {
   genre.append(spanGenre);
 
   const price = document.createElement("p");
-  genre.textContent = "Price: ";
+  price.textContent = "Price: ";
   const spanPrice = document.createElement("span");
-  spanGenre.classList.add("slide-price");
-  spanGenre.textContent = `$${game.discountedPrice}`;
-  genre.append(spanGenre);
+  spanPrice.classList.add("slide-price");
+  spanPrice.textContent = `$${game.discountedPrice}`;
+  price.append(spanPrice);
+  genreAndPrice.append(genre, price);
 
   const buttons = document.createElement("div");
   buttons.classList.add("slider-btns");

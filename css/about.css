@@ -27,6 +27,9 @@ h1 {
   font-size: 2.2rem;
   font-family: "Roboto Mono", monospace;
   letter-spacing: 3px;
+  border-bottom: 4px solid #e71e8b;
+  display: inline-block;
+  padding-bottom: 0.6rem;
 }
 
 .universe-of-games {

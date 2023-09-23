@@ -194,8 +194,8 @@ header nav a {
 .header-and-see-more {
   display: flex;
   justify-content: space-between;
-  width: 1300px;
-  max-width: 90%;
+  width: 1380px;
+  max-width: 95%;
 }
 
 .see-all-games {
