@@ -13,7 +13,7 @@ export default function cartItem(item, container) {
 
   const itemName = document.createElement("p");
   itemName.classList.add("cart-item-name");
-  itemName.textContent = item.title;
+  itemName.textContent = item.name;
 
   innerDiv.appendChild(img);
   innerDiv.appendChild(itemName);

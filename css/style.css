@@ -315,3 +315,29 @@ footer {
     font-size: 2.9rem;
   }
 } */
+
+@media (max-width: 1100px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 2rem;
+    gap: 3rem;
+  }
+
+  .newsletter-subtext {
+  }
+
+  .email-subscribe input {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .email-subscribe {
+    flex-direction: column;
+  }
+  .email-subscribe button {
+    width: 100%;
+  }
+}

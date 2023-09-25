@@ -17,7 +17,7 @@ export default function addToCart(game, quantity = 1) {
       newItem = {
         id: game.id,
         quantity: quantity,
-        name: game.name,
+        name: game.title,
         price: game.discountedPrice,
         img: game.image,
         alt: game.description,
@@ -28,9 +28,10 @@ export default function addToCart(game, quantity = 1) {
     newItem = {
       id: game.id,
       quantity: quantity,
-      name: game.name,
+      name: game.title,
       price: game.discountedPrice,
       img: game.image,
+      alt: game.description,
     };
     itemsInCart = [...gamesPrevAdded, newItem];
   }

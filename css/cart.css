@@ -1,7 +1,7 @@
 main {
   padding: 5% 1rem;
 
-  background: linear-gradient(#9163de, #e8daff, #4a3587);
+  background: #8f77b7;
 }
 
 .items-and-checkout {
@@ -24,6 +24,7 @@ main {
 .cart-item {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr auto;
   gap: 1rem;
   max-width: 700px;
   justify-content: space-between;
@@ -37,6 +38,7 @@ main {
 
 .cart-item {
   align-items: center;
+  font-family: "DM Sans", sans-serif;
 }
 
 .cart-item-img {
@@ -53,8 +55,10 @@ main {
   font-size: 1rem;
 }
 .quantity-container {
-  display: flex;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 110px;
+  text-align: center;
   align-items: center;
 }
 .quantity-container button {
