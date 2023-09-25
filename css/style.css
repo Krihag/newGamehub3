@@ -31,12 +31,22 @@ a {
 
 .button {
   color: #2d2267;
-  border-radius: 0.8rem;
+  border-radius: 1rem;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   padding: 1.1rem 2.5rem;
+}
+
+.transparent-btn {
+  background: transparent;
+  border: 2.5px solid #ebdfff;
+  color: #ebdfff;
+}
+.pink-btn {
+  border: none;
+  background: #ec4ca3;
 }
 
 .semi-bold {

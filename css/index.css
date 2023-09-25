@@ -39,8 +39,8 @@ header {
   max-width: 1750px;
   margin: auto;
   width: 100%;
-  gap: 1rem;
-  padding: 0 1% 1%;
+
+  padding: 0 0.5%;
 }
 
 .trending-container i {
@@ -53,16 +53,16 @@ header {
 }
 .article-content-and-img {
   display: flex;
-  width: 1300px;
-  max-width: 100%;
-  gap: 1rem;
+  width: 100%;
+  max-width: 1300px;
+
   border-radius: 2rem;
   /* height: 500px; */
   background: #ebdfff;
 }
 
 .article-content-and-img img {
-  width: 55%;
+  max-width: 50%;
   /* max-height: 500px; */
   object-fit: cover;
   object-position: 80%;
@@ -112,7 +112,7 @@ header {
 .article-buy {
   background: linear-gradient(to left, #ff94ce, #f167b2, #ec4ca3);
   border-style: none;
-  background-size: 150%;
+  /* background-size: 150%; */
   transition: 0.4s;
 }
 
@@ -140,10 +140,9 @@ header {
 }
 
 .article-slide {
-  max-width: 100%;
   position: relative;
-  width: 1600px;
-  padding: 0% 0% 5%;
+  width: 90%;
+  max-width: 1400px;
 }
 
 section {
@@ -242,22 +241,24 @@ section {
 }
 
 @media (max-width: 1600px) {
-  .article-content-and-img {
-    flex-direction: column;
-    justify-content: center;
-    width: 500px;
-  }
-
-  .article-content-and-img img {
-    width: 100%;
-    border-radius: 1rem 1rem 0 0;
-  }
-
   .trending-container article {
     justify-content: center;
-    gap: 2.5rem;
+    gap: 0.5rem;
   }
   .bestsellers-section > * {
     max-width: 680px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .article-content-and-img {
+    flex-direction: column;
+    justify-content: center;
+    /* width: 500px; */
+  }
+
+  .article-content-and-img img {
+    min-width: 100%;
+    border-radius: 2rem 2rem 0 0;
   }
 }

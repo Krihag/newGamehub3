@@ -28,7 +28,7 @@
         <ul class="login-and-search">
           <li><a href="#">Sign in</a></li>
           <li><a href="#">New user</a></li>
-          <li><a href="#">Cart</a></li>
+          <li><a class="shop-cart" href="/html/cart.html">Cart</a></li>
         </ul>
         <ul class="nav-pages">
           <li><a href="/html/games.html">Games</a></li>
@@ -105,13 +105,6 @@
           class="parallax koopa3"
         />
 
-        <!-- <img
-          src="/img/planet-spiderman.png"
-          data-speedx="0.25"
-          data-speedy="0.23"
-          data-speedz="0.04"
-          class="parallax spiderman"
-        /> -->
         <img
           src="/img/diddy-kong.png"
           data-speedx="0.25"
@@ -148,13 +141,12 @@
           data-speedz="0.06"
           class="parallax planet-green"
         />
-
         <img
           src="/img/galaxy-fog1.png"
-          data-speedx="0.21"
-          data-speedy="0.20"
-          data-speedz="0.09"
-          class="parallax fog8"
+          data-speedx="0.24"
+          data-speedy="0.22"
+          data-speedz="0.05"
+          class="parallax fog1"
         />
         <img
           src="/img/planet-peach.png"
@@ -171,13 +163,7 @@
           data-speedz="0.18"
           class="parallax big-boo"
         />
-        <img
-          src="/img/galaxy-fog1.png"
-          data-speedx="0.115"
-          data-speedy="0.11"
-          data-speedz="0.2"
-          class="parallax fog9"
-        />
+
         <img
           src="/img/meteor1.png"
           data-speedx="0.13"
@@ -238,7 +224,9 @@
                   <p>PRICE: <span class="article-price"></span></p>
                 </div>
                 <div class="article-btns">
-                  <button class="article-buy button">Buy now</button>
+                  <button class="article-buy button add-to-cart">
+                    Add to cart
+                  </button>
                   <button class="article-read button">Read more</button>
                 </div>
               </div>
@@ -269,7 +257,9 @@
                   <p>PRICE: <span class="article-price"></span></p>
                 </div>
                 <div class="article-btns">
-                  <button class="article-buy button">Buy now</button>
+                  <button class="article-buy button add-to-cart">
+                    Add to cart
+                  </button>
                   <button class="article-read button">Read more</button>
                 </div>
               </div>
@@ -300,7 +290,9 @@
                   <p>PRICE: <span class="article-price"></span></p>
                 </div>
                 <div class="article-btns">
-                  <button class="article-buy button">Buy now</button>
+                  <button class="article-buy button add-to-cart">
+                    Add to cart
+                  </button>
                   <button class="article-read button">Read more</button>
                 </div>
               </div>
@@ -379,6 +371,6 @@
       </div>
     </footer>
     <script type="module" defer src="src/script.js"></script>
-    <script type="module" defer src="src/index.js"></script>
+    <script type="module" defer src="src/pages/index.js"></script>
   </body>
 </html>

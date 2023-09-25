@@ -79,17 +79,17 @@
 }
 
 .planet-green {
-  width: 17%;
-  top: 72.3%;
-  left: 18%;
+  width: 15%;
+  top: 79.3%;
+  left: 23%;
   z-index: 17;
 }
 
-.fog8 {
-  width: 22.3%;
-  top: 77.5%;
-  left: 27%;
-  z-index: 18;
+.fog1 {
+  width: 65%;
+  top: 78.3%;
+  left: 23%;
+  z-index: 17;
 }
 
 .peach {
@@ -132,13 +132,6 @@
   top: 88%;
   left: 3.5%;
   z-index: 25;
-}
-
-.fog10 {
-  width: 56%;
-  top: 89.5%;
-  left: 64%;
-  z-index: 26;
 }
 
 .luigi {
@@ -191,10 +184,6 @@
   }
 
   .koopa2 {
-    display: none;
-  }
-
-  .fog8 {
     display: none;
   }
 

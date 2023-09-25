@@ -1,6 +1,7 @@
-import fetchGames from "./games/fetchGames.js";
-import smallGame from "./games/smallGame.js";
-import chat from "./chat/chat.js";
+import fetchGames from "../games/fetchGames.js";
+import smallGame from "../games/smallGame.js";
+import chat from "../chat/chat.js";
+import addToCart from "../cart/addToCart.js";
 
 const parallaxEl = document.querySelectorAll(".parallax");
 const main = document.querySelector(".parallax-container");
@@ -75,6 +76,7 @@ const cyberPunk = games.find((game) => game.title == "Cyberpunk");
 const featuredGames = [forge, racing, cyberPunk];
 
 articleSlides.forEach((slide, i) => {
+  slide.dataset.id = featuredGames[i].id;
   slide.querySelector("h3").textContent = featuredGames[i].title;
   slide.querySelector(".article-description").textContent =
     featuredGames[i].description;
@@ -97,3 +99,15 @@ for (let i = 4; i < 8; i++) {
 }
 
 chat();
+
+const addToCartBtn = document.querySelectorAll(".add-to-cart");
+
+addToCartBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const target =
+      e.target.parentElement.parentElement.parentElement.parentElement;
+    const id = target.dataset.id;
+    const foundGame = games.find((game) => game.id === id);
+    addToCart(foundGame);
+  });
+});

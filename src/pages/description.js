@@ -69,6 +69,7 @@ deviceInput2.textContent = "X-box";
 
 const buyBtn = document.createElement("button");
 buyBtn.classList.add("buy-now-btn");
+buyBtn.classList.add("add-to-cart");
 buyBtn.textContent = "Buy now";
 
 gameContainer.append(container);

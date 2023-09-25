@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamehub Parallax</title>
+    <script
+      src="https://kit.fontawesome.com/5b97174c12.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Raleway:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+  </head>
+  <body>
+    <header class="hide">
+      <a href="../index.html" class="logo">
+        <img src="/img/gamehub-logo.png" alt="gamehub logo" />
+      </a>
+      <nav>
+        <ul class="login-and-search">
+          <li><a href="#">Sign in</a></li>
+          <li><a href="#">New user</a></li>
+          <li><a class="shop-cart" href="cart.html">Cart</a></li>
+        </ul>
+        <ul class="nav-pages">
+          <li><a href="games.html">Games</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="items-and-checkout">
+        <section class="cart-items-section">
+          <div class="cart-items-header">
+            <p>Product</p>
+            <p>Price</p>
+            <p>quantity</p>
+            <p>Total</p>
+          </div>
+          <div class="cart-items-container"></div>
+        </section>
+        <section class="checkout-section">
+          <h1>Cart total <span>$19.99</span></h1>
+          <div class="cart-btns">
+            <button class="pink-btn button">checkout</button>
+            <button class="transparent-btn button">Shop more</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script defer type="module" src="../src/pages/cart.js"></script>
+  </body>
+</html>
