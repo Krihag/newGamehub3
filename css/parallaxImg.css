@@ -155,9 +155,9 @@
   z-index: 35;
 }
 
-.hidden {
+/* .hidden {
   visibility: hidden;
-}
+} */
 
 @media (max-width: 725px) {
   .meteor-2 {

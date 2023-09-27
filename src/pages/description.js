@@ -91,3 +91,8 @@ quantityAndDevice.append(quantityContainer, deviceContainer);
 quantityContainer.append(quantityText, quantityInput);
 
 deviceContainer.append(deviceText, deviceInput1, deviceInput2);
+
+// GAME IMG
+// window.addEventListener("scroll", () => {
+
+// })

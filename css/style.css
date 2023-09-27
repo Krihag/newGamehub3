@@ -72,10 +72,11 @@ header {
 }
 
 nav {
-  flex-direction: column;
-  justify-content: start;
+  /* flex-direction: column; */
+  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 nav ul {
@@ -92,6 +93,37 @@ header nav a {
   color: #fff;
   /* font-family: "DM Sans", sans-serif; */
   /* text-transform: uppercase; */
+}
+
+header nav i {
+  color: #fff;
+}
+
+.search-and-cart {
+  justify-content: space-between;
+  align-items: center;
+}
+header nav input {
+  padding: 0.3rem;
+
+  border-radius: 0.5rem;
+  width: 300px;
+  font-size: 1.3rem;
+}
+.hamburger-menu {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* HEADER - NAV */
+
+.hamburger-menu {
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
 }
 
 /* best sellers */
@@ -315,7 +347,11 @@ footer {
     font-size: 2.9rem;
   }
 } */
-
+@media (max-width: 1300px) {
+  header nav {
+    flex-direction: column-reverse;
+  }
+}
 @media (max-width: 1100px) {
   footer {
     flex-direction: column;
@@ -333,6 +369,67 @@ footer {
     width: 100%;
   }
 }
+
+@media (max-width: 800px) {
+  .main-header {
+    position: fixed;
+    width: 100%;
+    padding: 1.2rem 7%;
+    display: flex;
+    align-items: center;
+  }
+  nav ul {
+    right: 0;
+    flex-direction: column;
+
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    top: 7rem;
+
+    left: 0;
+    background: #4a3587;
+    padding: 4rem 0;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1px solid #190e41;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 1rem 0;
+    display: block;
+  }
+  .search-and-cart {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .search-and-cart input {
+    padding: 0.3rem;
+    width: 90%;
+    max-width: 450px;
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .hamburger-menu {
+    display: inline-block;
+  }
+
+  .nav-hidden {
+    display: none;
+  }
+}
+
 @media (max-width: 500px) {
   .email-subscribe {
     flex-direction: column;

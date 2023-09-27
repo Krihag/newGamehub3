@@ -42,17 +42,19 @@ main {
 }
 
 .cart-item-img {
-  width: 110px;
+  width: 140px;
   object-fit: cover;
   object-position: center 80%;
-  height: 115px;
+  height: 145px;
   border-radius: 1rem;
+  align-self: center;
 }
 
 .cart-item-name {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
+  text-align: center;
 }
 .quantity-container {
   display: grid;

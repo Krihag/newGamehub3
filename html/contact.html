@@ -33,16 +33,20 @@
       <a href="../index.html" class="logo">
         <img src="../img/gamehub-logo.png" alt="gamehub logo" />
       </a>
-      <nav>
-        <ul class="login-and-search">
-          <li><a href="#">Sign in</a></li>
-          <li><a href="#">New user</a></li>
-          <li><a href="#">Cart</a></li>
-        </ul>
+      <nav class="nav-hidden">
+        
         <ul class="nav-pages">
-          <li><a href="/html/games.html">Games</a></li>
-          <li><a href="/html/contact.html">Contact</a></li>
-          <li><a href="/html/about.html">About us</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About us</a></li>
+        </ul>
+        <ul class="search-and-cart">
+          <div>
+           <input type="search">
+           <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+          </div>
+            <a href="/html/cart.html"> Cart <i class="fa-solid fa-cart-shopping"></i> </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -76,6 +80,43 @@
           <button class="button">Send</button>
         </form>
       </section>
+      <section class="visit-us-section">
+        <article class="visit-us-container">
+          <h2>Visit us</h2>
+          <p>
+            We also have a store located in Bergen, Fyllingsdalen. Feel free to
+            visit us!
+          </p>
+          <p class="visit-address">Nygaten 12, 5123 Fyllingsdalen</p>
+          <img src="/img/map.png" alt="map of our store location" />
+        </article>
+      </section>
     </main>
+    <footer>
+      <div class="footer-newsletter">
+        <p class="footer-header">Newsletter</p>
+        <p class="newsletter-subtext">
+          Subscribe today and get all the newest updates for your favorite games
+        </p>
+        <div class="email-subscribe">
+          <input type="text" / placeholder="Email address" class="footer-input">
+          <button class="subscribe-button">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-header">Contact</div>
+        <a href="contact.html">Contact us</a>
+        <a href="about.html">About us</a>
+        <p>Phone: +47 987 65 432</p>
+      </div>
+      <div class="so-me-container">
+        <p class="footer-header">Social Media:</p>
+        <div class="footer-icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

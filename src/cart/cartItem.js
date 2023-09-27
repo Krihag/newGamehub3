@@ -1,3 +1,5 @@
+import updateCart from "./updateCart.js";
+
 export default function cartItem(item, container) {
   const cartItemDiv = document.createElement("div");
   cartItemDiv.classList.add("cart-item");
@@ -41,11 +43,13 @@ export default function cartItem(item, container) {
   decreaseBtn.addEventListener("click", (e) => {
     e.preventDefault();
     item.quantity--;
+    updateCart(item);
   });
 
   increaseBtn.addEventListener("click", (e) => {
     e.preventDefault();
     item.quantity++;
+    updateCart(item);
   });
 
   console.log(cartItemDiv);

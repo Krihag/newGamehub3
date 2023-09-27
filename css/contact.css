@@ -2,11 +2,11 @@
   background: #ebdfff;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   /* align-items: center; */
   font-size: 1.5rem;
-  gap: 2rem;
-  padding: 5rem 10%;
+  gap: 10rem;
+  padding: 5rem 5%;
 }
 
 .contact-form {
@@ -16,11 +16,10 @@
   align-items: center;
   padding-top: 5rem;
   max-width: 400px;
-  margin: auto;
 }
 
-input,
-textarea {
+form input,
+form textarea {
   width: 400px;
   margin: 30px auto 0;
   padding: 0.5rem;
@@ -58,5 +57,25 @@ h2 {
   line-height: 2.5rem;
 }
 .contact-text span {
+  font-weight: bold;
+}
+
+/*VISIT US */
+.visit-us-section {
+  background: #ebdfff;
+  font-size: 1.3rem;
+}
+
+.visit-us-container {
+  padding: 10rem 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.visit-address {
   font-weight: bold;
 }
