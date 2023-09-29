@@ -1,3 +1,5 @@
+import hamburgerMenu from "./effects/hamburgerMenu.js";
+
 const footerBtn = document.querySelector(".subscribe-button");
 const footerInput = document.querySelector(".footer-input");
 const newsText = document.querySelector(".newsletter-subtext");
@@ -12,3 +14,4 @@ footerBtn.addEventListener("click", function (e) {
   newsText.textContent = `Confirmation email will be sent to: ${inputVal}`;
   footerBtn.style.transition = ".5s ease-in";
 });
+hamburgerMenu();

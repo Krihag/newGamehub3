@@ -21,7 +21,7 @@
   border: 2px solid #2d2267;
   border-radius: 0.5rem;
 }
-.fa-xmark {
+.chat-close {
   color: #2d2267;
   align-self: end;
   font-size: 1.5rem;

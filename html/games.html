@@ -24,22 +24,30 @@
     <script defer type="module" src="../src/pages/games.js"></script>
   </head>
   <body>
-    <header class="hide">
+    <header class="main-header">
       <a href="../index.html" class="logo">
         <img src="/img/gamehub-logo.png" alt="gamehub logo" />
       </a>
-      <nav>
-        <ul class="login-and-search">
-          <li><a href="#">Sign in</a></li>
-          <li><a href="#">New user</a></li>
-          <li><a href="#">Cart</a></li>
-        </ul>
+      <nav class="nav-hidden">
+        
         <ul class="nav-pages">
-          <li><a href="#">Games</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">About us</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About us</a></li>
+        </ul>
+        <ul class="search-and-cart">
+          <div>
+           <input type="search">
+           <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+          </div>
+            <a href="#"> Cart <i class="fa-solid fa-cart-shopping"></i> </a>
+          </li>
         </ul>
       </nav>
+      <div class="hamburger-menu">
+        <i class="fa-solid fa-bars menu-open"></i>
+        <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
+      </div>
     </header>
     <main>
       <section class="slider-section">
@@ -47,7 +55,7 @@
           </article>
         </div>
       </section>
-      <section class="all-games-section">
+      <section class="games-section all-games-section">
         <div class="category-container">
           <h3 class=" category-header">All games </h3>
           <form action="#" class="categories-form">

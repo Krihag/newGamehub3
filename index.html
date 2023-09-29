@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <header class="hide">
+    <header class="index-header ">
       <a href="../index.html" class="logo">
         <img src="/img/gamehub-logo.png" alt="gamehub logo" />
       </a>
@@ -40,10 +40,14 @@
           </li>
         </ul>
       </nav>
+      <div class="hamburger-menu">
+        <i class="fa-solid fa-bars menu-open"></i>
+        <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
+      </div>
     </header>
     <div class="full-chat-container">
       <div class="chat-box-container hide-item">
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-xmark chat-close"></i>
         <div class="chat-details chat-function">
           <div class="chat-welcome-text">Welcome to our chat!</div>
           <div class="chat-input chat-name">
@@ -305,7 +309,7 @@
         </div>
       </section>
 
-      <section class="bestsellers-section">
+      <section class="bestsellers-section games-section">
         <div class="header-and-see-more">
           <h2>Bestsellers</h2>
           <a href="#" class="see-all-games semi-bold pink-bottom-border"
@@ -331,7 +335,7 @@
           <div class="sale-img-container"></div>
         </article>
       </section>
-      <section class="bestsellers-section">
+      <section class="games-section">
         <div class="header-and-see-more">
           <h2>New games</h2>
           <a

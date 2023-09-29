@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamehub Parallax</title>
+    <script
+      src="https://kit.fontawesome.com/5b97174c12.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Raleway:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="stylesheet" href="../css/checkout.css" />
+  </head>
+  <body>
+    <header class="hide">
+      <a href="../index.html" class="logo">
+        <img src="/img/gamehub-logo.png" alt="gamehub logo" />
+      </a>
+    </header>
+    <main>
+      <section class="personal-info-section">
+        <article class="checkout-main-container">
+          <div class="checkout-line">
+            <div class="checkout-ship">
+              <img src="/img/checkout-ship.png" alt="" />
+              <p class="ship-text">Personal Info</p>
+            </div>
+          </div>
+          <div class="checkout-forms-container">
+            <form class="personal-info-form">
+              <label>Personal Info</label>
+              <input type="text" placeholder="First name:" required />
+              <input type="text" placeholder="Last name:" required />
+              <input type="email" placeholder="Email:" required />
+            </form>
+
+            <form class="delivery-address-form">
+              <label>Delivery Address</label>
+              <input
+                type="text"
+                placeholder="Street name and number:"
+                required
+              />
+              <div class="city-and-zip">
+                <input type="text" placeholder="City:" class="delivery-city" />
+                <input type="number" placeholder="ZIP:" class="delivery-zip" />
+              </div>
+              <button class="button pink-btn">To payment ></button>
+            </form>
+          </div>
+        </article>
+
+        <article class="order-summary-section">
+          <div class="order-summary">
+            <h1>Order summary</h1>
+            <div class="subtotal-container">
+              <p>Subtotal</p>
+              <p class="subtotal-price">$19.99</p>
+            </div>
+            <div class="shipping-container">
+              <p>Shipping</p>
+              <p class="shipping-price">FREE</p>
+            </div>
+            <div class="total-price-container">
+              <p>TOTAL</p>
+              <p class="total-price">$19.99</p>
+            </div>
+          </div>
+          <div class="cart-summary">
+            <h2>Cart summary</h2>
+            <div class="cart-items-container">
+              <!-- <div class="cart-item">
+                <img src="" alt="" class="item-img" />
+                <div class="item-content">
+                  <p class="item-name">Product Name goes here</p>
+                  <div class="quantity-and-price">
+                    <p>quantity: <span>1</span></p>
+                    <p>$39.99</p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-newsletter">
+        <p class="footer-header">Newsletter</p>
+        <p class="newsletter-subtext">
+          Subscribe today and get all the newest updates for your favorite games
+        </p>
+        <div class="email-subscribe">
+          <input type="text" / placeholder="Email address" class="footer-input">
+          <button class="subscribe-button">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-header">Contact</div>
+        <a href="contact.html">Contact us</a>
+        <a href="about.html">About us</a>
+        <p>Phone: +47 987 65 432</p>
+      </div>
+      <div class="so-me-container">
+        <p class="footer-header">Social Media:</p>
+        <div class="footer-icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </footer>
+    <script defer type="module" src="../src/pages/checkout.js"></script>
+  </body>
+</html>

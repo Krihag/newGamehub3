@@ -3,7 +3,7 @@ import chatBot from "./chatBot//chatBot.js";
 const chatContainer = document.querySelector(".chat-container");
 const chatIcon = document.querySelector(".chat-icon");
 const chatBoxContainer = document.querySelector(".chat-box-container");
-const closeChat = document.querySelector(".fa-xmark");
+const closeChat = document.querySelector(".chat-close");
 const startChat = document.querySelector(".start-chat-btn");
 const nameInput = document.querySelector(".name-input");
 

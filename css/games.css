@@ -38,7 +38,7 @@ header {
 
 .slide-container {
   height: 900px;
-  max-width: 1200px;
+  max-width: 1050px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,24 +70,27 @@ header {
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   /* font-size: 1.6rem; */
+  background: rgba(0, 0, 0, 0.49);
+  padding: 0.4rem 1.4rem;
+  border-radius: 1rem;
+  width: 240px;
+  gap: 0.7rem;
 }
 
 .genre-and-price p {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  /* grid-template-columns: 1fr auto; */
 
   max-width: 200px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .genre-and-price span {
   font-weight: normal;
-  background: rgba(0, 0, 0, 0.49);
-  padding: 0.7rem;
-  width: 100px;
-  border-radius: 1rem;
+
+  /* width: 100px; */
+  justify-self: end;
   margin: 0;
 }
 
@@ -97,7 +100,6 @@ header {
 }
 
 .slider-btns button {
-  width: 45%;
   max-width: 200px;
   margin: 0 1rem 1rem 0;
   transition: 0.3s;
@@ -126,11 +128,6 @@ header {
 
 /* ALL GAMES SECTION */
 .all-games-section {
-  background: #ebdfff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 12rem 2%;
 }
 
@@ -153,7 +150,6 @@ h3,
   align-items: end;
 
   width: 1360px;
-  max-width: 100%;
 }
 .categories-form {
   display: flex;
@@ -339,5 +335,89 @@ h3,
 .cyber-btns .cyber-read {
   background: transparent;
   color: #ebdfff;
-  border: 2px solid #3fa535;
+  border: 2px solid #ebdfff;
+}
+
+@media (max-width: 1300px) {
+  .cyberpunk-section {
+    flex-direction: column;
+    background-size: auto;
+    align-items: center;
+    justify-content: start;
+    padding: 2rem 0 2rem 0;
+    margin: 0;
+    background-position: top;
+
+    gap: 0;
+  }
+
+  .arrows-and-chars {
+    padding-top: 3rem;
+    width: 620px;
+  }
+
+  /* .arrows-pick {
+    max-width: 90%;
+  } */
+  .cyberpunk-main-container {
+    width: 100%;
+
+    background: #150e2e;
+
+    min-height: 100%;
+    min-width: 100%;
+    padding: 2.5rem 2rem 3.5rem;
+    align-items: center;
+  }
+  .cyber-description {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .slide-container {
+    flex-direction: column;
+    max-height: 100%;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .slide-image {
+    width: 300px;
+    transform: rotate(0);
+  }
+
+  .slide-content {
+    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .category-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .slide-content {
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .slide-image {
+    width: 230px;
+  }
+  .slider-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slider-btns button {
+    width: 95%;
+    min-width: 250px;
+  }
 }
