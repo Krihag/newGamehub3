@@ -28,18 +28,28 @@
     <main>
       <section class="personal-info-section">
         <article class="checkout-main-container">
-          <div class="checkout-line">
-            <div class="checkout-ship">
-              <img src="/img/checkout-ship.png" alt="" />
-              <p class="ship-text">Personal Info</p>
+          <div class="ship-full-container">
+            <div class="checkout-line">
+              <div class="checkout-ship">
+                <img src="/img/checkout-ship.png" alt="" />
+                <p class="ship-text"></p>
+              </div>
             </div>
           </div>
           <div class="checkout-forms-container">
             <form class="personal-info-form">
               <label>Personal Info</label>
-              <input type="text" placeholder="First name:" required />
-              <input type="text" placeholder="Last name:" required />
-              <input type="email" placeholder="Email:" required />
+              <input
+                type="text"
+                placeholder="First name:"
+                class="input-detail"
+              />
+              <input
+                type="text"
+                placeholder="Last name:"
+                class="input-detail"
+              />
+              <input type="email" placeholder="Email:" class="input-detail" />
             </form>
 
             <form class="delivery-address-form">
@@ -47,13 +57,23 @@
               <input
                 type="text"
                 placeholder="Street name and number:"
-                required
+                class="input-detail"
               />
               <div class="city-and-zip">
-                <input type="text" placeholder="City:" class="delivery-city" />
-                <input type="number" placeholder="ZIP:" class="delivery-zip" />
+                <input
+                  type="text"
+                  placeholder="City:"
+                  class="delivery-city input-detail"
+                />
+                <input
+                  type="number"
+                  placeholder="ZIP:"
+                  class="delivery-zip input-detail"
+                />
               </div>
-              <button class="button pink-btn">To payment ></button>
+              <button class="button pink-btn to-payment-btn">
+                To payment >
+              </button>
             </form>
           </div>
         </article>
@@ -69,7 +89,7 @@
               <p>Shipping</p>
               <p class="shipping-price">FREE</p>
             </div>
-            <div class="total-price-container">
+            <div class="total-price-container border-bottom">
               <p>TOTAL</p>
               <p class="total-price">$19.99</p>
             </div>

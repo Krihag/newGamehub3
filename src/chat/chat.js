@@ -61,6 +61,7 @@ export default function chat() {
     chatTextOne.textContent = `${chatBot.name} is typing...`;
 
     const questionInput = document.createElement("textarea");
+    questionInput.placeholder = "Type here:";
     questionInput.classList.add("chat-question-box");
 
     const sendBtn = document.createElement("button");

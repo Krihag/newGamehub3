@@ -1,43 +1,65 @@
+import summaryItem from "../cart/checkout/summaryItem.js";
+import switchText from "../effects/switchText.js";
+import shipmentPay from "../cart/checkout/shipmentPay.js";
+
 const itemsContainer = document.querySelector(".cart-items-container");
+const moveShip = document.querySelector(".checkout-ship");
+const shipText = document.querySelector(".ship-text");
+const paymentBtn = document.querySelector(".to-payment-btn");
+const main = document.querySelector("main");
+const orderSummary = document.querySelector(".order-summary-section");
+const mainContentContainer = document.querySelector(
+  ".checkout-forms-container"
+);
+const shipContainer = document.querySelector(".ship-full-container ");
 
 const getPrevGames = localStorage.getItem("cartItems");
 const cartGames = JSON.parse(getPrevGames);
 
-cartGames.forEach((game) => {
-  const cartItem = document.createElement("div");
-  cartItem.classList.add("cart-item");
+let textInterval = switchText(shipText, ["Personal Info", "Step one!"], 5000);
 
-  const itemImage = document.createElement("img");
-  itemImage.classList.add("item-img");
-  itemImage.src = game.img;
-  itemImage.alt = game.alt;
+cartGames.forEach((game) => summaryItem(game, itemsContainer));
 
-  const itemContent = document.createElement("div");
-  itemContent.classList.add("item-content");
+paymentBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  clearInterval(textInterval);
+  shipText.textContent = "";
+  mainContentContainer.innerHTML = "";
+  shipContainer.style.position = "fixed";
 
-  const itemName = document.createElement("p");
-  itemName.classList.add("item-name");
-  itemName.textContent = game.name;
+  moveShip.style.transform = "translateX(12.5rem)";
+  main.style.backgroundColor = "#FFCDF1";
+  orderSummary.style.backgroundColor = "#f9bbe8";
+  const borderBottom = document.querySelectorAll(".border-bottom");
+  console.log(borderBottom);
+  borderBottom.forEach((border) => (border.style.borderColor = "#f293c7"));
 
-  const quantityAndPrice = document.createElement("div");
-  quantityAndPrice.classList.add("quantity-and-price");
+  setTimeout(() => {
+    shipmentPay(mainContentContainer);
+    shipContainer.style.position = "static";
 
-  const quantity = document.createElement("p");
-  quantity.textContent = "quantity: ";
+    textInterval = switchText(
+      shipText,
+      ["Shipping & Payment", "Almost done!"],
+      5000
+    );
 
-  const quantityValue = document.createElement("span");
-  quantityValue.textContent = game.quantity;
+    const payNowBtn = document.querySelector(".pay-now-btn");
 
-  const price = document.createElement("p");
-  price.textContent = "$" + game.price;
+    payNowBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      mainContentContainer.innerHTML = "";
+      clearInterval(textInterval);
+      shipText.textContent = "";
+      shipContainer.style.position = "fixed";
+      moveShip.style.transform = "translateX(25.5rem)";
+      orderSummary.style.transform = "translateX(102%)";
+      main.style.backgroundColor = "#FEE9D6";
 
-  quantity.appendChild(quantityValue);
-  quantityAndPrice.appendChild(quantity);
-  quantityAndPrice.appendChild(price);
-  itemContent.appendChild(itemName);
-  itemContent.appendChild(quantityAndPrice);
-  cartItem.appendChild(itemImage);
-  cartItem.appendChild(itemContent);
-
-  itemsContainer.append(cartItem);
+      setTimeout(() => {
+        shipText.textContent = "Finished!";
+        shipContainer.style.position = "static";
+      }, 3200);
+    });
+  }, 3200);
 });

@@ -1,6 +1,4 @@
 body {
-  /* min-height: 100vh; */
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,6 +14,8 @@ main {
   flex: 1;
   font-size: 1.3rem;
   height: 100%;
+  transition: background-color 3s ease-in;
+  overflow: hidden;
 }
 
 .personal-info-section {
@@ -23,31 +23,39 @@ main {
   justify-content: space-between;
   padding-left: 10%;
   color: #2d2267;
+  min-height: 80vh;
 }
-
+.ship-full-container {
+  /* top: 5rem; */
+  /* display: flex;
+  align-items: center; */
+  padding-top: 5rem;
+  z-index: 999;
+}
 .checkout-line {
   background: url(../img/checkout-line.png) no-repeat;
 
-  position: relative;
   height: 1.5rem;
-  margin-top: 5rem;
 
   display: inline-block;
   width: 450px;
 }
 .checkout-ship {
   position: absolute;
-  top: -1.4rem;
-  left: -3.5rem;
+  top: 3.6rem;
+  left: -6.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 3s ease-in-out;
+  width: 200px;
 }
 .checkout-ship p {
   font-weight: 500;
 }
 
-label {
+.personal-info-form label,
+.delivery-address-form label {
   align-self: start;
   font-size: 1.5rem;
   font-weight: bold;
@@ -57,6 +65,7 @@ label {
 .checkout-main-container {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   gap: 2rem;
 
@@ -74,8 +83,7 @@ label {
 
   gap: 1rem;
 }
-
-.checkout-main-container input {
+.input-detail {
   width: 430px;
   max-width: 100%;
   padding: 1rem;
@@ -99,7 +107,8 @@ label {
 }
 .delivery-address-form button {
   margin-top: 2rem;
-  align-self: flex-start;
+  display: inline-block;
+  align-self: start;
 }
 
 .personal-info-and-summary {
@@ -118,16 +127,18 @@ label {
 
 .order-summary-section {
   background: #beaefc;
-  width: 450px;
-  padding: 5rem 2rem;
+  width: 520px;
+  padding: 5rem 4rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: "DM Sans", sans-serif;
+  transition: all 2.5s ease-in;
+  /* transition: transform 2s ease-out; */
 }
 
 .order-summary {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  font-family: "DM Sans", sans-serif;
 }
 
 .subtotal-container,
@@ -139,7 +150,7 @@ label {
 .total-price-container {
   font-weight: bold;
   padding-top: 1.5rem;
-  border-top: 1px solid #190e41;
+  padding-bottom: 1rem;
 }
 
 .cart-summary {
@@ -155,8 +166,13 @@ label {
   display: flex;
   gap: 1rem;
   width: 90%;
-  border-bottom: 3px solid #9c88eb;
+
   padding-bottom: 1rem;
+}
+
+.border-bottom {
+  border-bottom: 3px solid #9c88eb;
+  transition: border 3s ease;
 }
 .item-img {
   width: 110px;
@@ -165,6 +181,8 @@ label {
   border-radius: 0.3rem;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+
+/* #ec4ca3 */
 
 .item-content {
   display: flex;
@@ -180,4 +198,76 @@ label {
 .quantity-and-price {
   display: flex;
   justify-content: space-between;
+}
+
+/* SHIPPING & PAYMENT */
+
+.shipping-options-form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: start;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.radio-option-1,
+.radio-option-2 {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+input[type="radio"]:after {
+  content: "";
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 2px;
+  top: -5px;
+  left: -1px;
+  background-color: #ffcdf1;
+  display: inline-block;
+  position: relative;
+  border: 4px solid #2d2267;
+}
+input[type="radio"]:checked:after {
+  background-color: #e962ac;
+  border-radius: 30px;
+}
+
+.shipping-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Payment form*/
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 6rem;
+}
+.payment-form input {
+  background: #ffeffb;
+}
+
+.exp-and-ccv {
+  display: flex;
+  gap: 1.6rem;
+}
+.exp-date {
+  width: 40%;
+}
+
+.card-ccv {
+  width: 30%;
+}
+.pay-now-btn {
+  margin-top: 2rem;
+  width: 250px;
 }
