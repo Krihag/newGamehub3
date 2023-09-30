@@ -1,3 +1,5 @@
+import updateCart from "./updateCart.js";
+
 export default function addToCart(game, quantity = 1) {
   const getPrevGames = localStorage.getItem("cartItems");
   let gamesPrevAdded = JSON.parse(getPrevGames);
@@ -8,8 +10,12 @@ export default function addToCart(game, quantity = 1) {
   let newItem;
 
   if (gamesPrevAdded) {
-    const foundGame = gamesPrevAdded.find((curGame) => curGame.id === game.id);
-    console.log(foundGame);
+    const foundGame = gamesPrevAdded.find((curGame) => {
+      if (curGame.id === game.id) {
+        updateCart(curGame);
+        return game.id;
+      }
+    });
 
     if (foundGame) {
       foundGame.quantity += quantity;

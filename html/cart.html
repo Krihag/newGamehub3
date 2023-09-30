@@ -22,39 +22,37 @@
   <body>
     <header class="hide">
       <a href="../index.html" class="logo">
-        <img src="/img/gamehub-logo.png" alt="gamehub logo" />
+        <img src="../img/gamehub-logo.png" alt="gamehub logo" />
       </a>
-      <nav>
-        <ul class="login-and-search">
-          <li><a href="#">Sign in</a></li>
-          <li><a href="#">New user</a></li>
-          <li><a class="shop-cart" href="cart.html">Cart</a></li>
-        </ul>
+      <nav class="nav-hidden">
+        <div>
+          <input type="search" />
+          <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
         <ul class="nav-pages">
           <li><a href="games.html">Games</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About us</a></li>
+          <li>
+            <a href="/html/cart.html">
+              <i class="fa-solid fa-cart-shopping shopping-cart"></i>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="items-and-checkout">
-        <section class="cart-items-section">
-          <div class="cart-items-header">
-            <p>Product</p>
-            <p>Price</p>
-            <p>quantity</p>
-            <p>Total</p>
-          </div>
+      <div class="items-and-checkout cart-container">
+        <div class="cart-items-section">
           <div class="cart-items-container"></div>
-        </section>
-        <section class="checkout-section">
-          <h1>Cart total <span></span></h1>
+        </div>
+        <div class="checkout-section">
+          <p class="cart-total">Cart total <span></span></p>
           <div class="cart-btns">
-            <a href="checkout.html" class="pink-btn button">checkout</a>
-            <button class="transparent-btn button">Shop more</button>
+            <a href="checkout.html" class="pink-btn button">to checkout</a>
+            <button class="transparent-btn button shop-more">Shop more</button>
           </div>
-        </section>
+        </div>
       </div>
     </main>
     <script defer type="module" src="../src/pages/cart.js"></script>

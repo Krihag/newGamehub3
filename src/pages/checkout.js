@@ -12,9 +12,17 @@ const mainContentContainer = document.querySelector(
   ".checkout-forms-container"
 );
 const shipContainer = document.querySelector(".ship-full-container ");
+const subTotalContainer = document.querySelector(".subtotal-price");
+const totalPriceContainer = document.querySelector(".total-price");
+const shipPrice = document.querySelector(".shipping-price");
 
 const getPrevGames = localStorage.getItem("cartItems");
 const cartGames = JSON.parse(getPrevGames);
+const getSubtotal = localStorage.getItem("totalCart");
+const subtotal = JSON.parse(getSubtotal).toFixed(2);
+
+subTotalContainer.textContent = "$" + subtotal;
+totalPriceContainer.textContent = "$" + subtotal;
 
 let textInterval = switchText(shipText, ["Personal Info", "Step one!"], 5000);
 
@@ -31,11 +39,20 @@ paymentBtn.addEventListener("click", function (e) {
   main.style.backgroundColor = "#FFCDF1";
   orderSummary.style.backgroundColor = "#f9bbe8";
   const borderBottom = document.querySelectorAll(".border-bottom");
-  console.log(borderBottom);
+
   borderBottom.forEach((border) => (border.style.borderColor = "#f293c7"));
 
   setTimeout(() => {
     shipmentPay(mainContentContainer);
+
+    const radioBtns = document.querySelectorAll(".radio-options");
+    radioBtns.forEach((btn) =>
+      btn.addEventListener("change", (e) => {
+        const updatedPrice = Number(subtotal) + Number(e.target.dataset.price);
+        shipPrice.textContent = "$" + e.target.dataset.price;
+        totalPriceContainer.textContent = "$" + updatedPrice.toFixed(2);
+      })
+    );
     shipContainer.style.position = "static";
 
     textInterval = switchText(
@@ -57,7 +74,11 @@ paymentBtn.addEventListener("click", function (e) {
       main.style.backgroundColor = "#FEE9D6";
 
       setTimeout(() => {
-        shipText.textContent = "Finished!";
+        textInterval = switchText(
+          shipText,
+          ["Finished!", "Order Successful"],
+          5000
+        );
         shipContainer.style.position = "static";
       }, 3200);
     });

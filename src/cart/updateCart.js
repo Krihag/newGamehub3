@@ -1,4 +1,4 @@
-const totalPriceContainer = document.querySelector("h1 span");
+const totalPriceContainer = document.querySelector(".cart-total span");
 
 export default function updateCart(item) {
   const getPrevGames = localStorage.getItem("cartItems");
@@ -12,12 +12,11 @@ export default function updateCart(item) {
       gamesPrevAdded[index].quantity = item.quantity;
     }
     localStorage.setItem("cartItems", JSON.stringify(gamesPrevAdded));
-    // const totalSum = gamesPrevAdded.reduce((acc, cur) => {
-    //   const itemSum = cur.price * cur.quantity;
-    //   return acc + itemSum;
-    // }, 0);
-    // totalPriceContainer.textContent = "$" + totalSum.toFixed(2);
+    const totalSum = gamesPrevAdded.reduce((acc, cur) => {
+      const itemSum = cur.price * cur.quantity;
+      return acc + itemSum;
+    }, 0);
+    localStorage.setItem("totalCart", totalSum);
+    totalPriceContainer.textContent = "$" + totalSum.toFixed(2);
   }
-
-  location.reload();
 }

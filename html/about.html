@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/cart.css">
 
     <script defer type="module" src="/src/pages/about.js"></script>
   </head>
@@ -44,7 +45,7 @@
            <input type="search">
            <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
           </div>
-            <a href="#"> Cart <i class="fa-solid fa-cart-shopping"></i> </a>
+            <a href="#" class="shopping-cart-icon"> Cart <i class="fa-solid fa-cart-shopping"></i> </a>
           </li>
         </ul>
       </nav>
@@ -52,28 +53,41 @@
         <i class="fa-solid fa-bars menu-open"></i>
         <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
       </div>
+      <div class="cart-container cart-visibility">
+        <div class="cart-items-section">
+          <div class="cart-items-container"></div>
+        </div>
+        <div class="checkout-section">
+          <p class="cart-total">Cart total <span></span></p>
+          <div class="cart-btns">
+            <a href="checkout.html" class="pink-btn button">to checkout</a>
+            <button class="transparent-btn button shop-more">Shop more</button>
+          </div>
+        </div>
+      </div>
+  
+  
     </header>
+
+
     <main>
       <section class="about-us-section">
         <article>
           <h1 data-value="About gamehub">About gamehub</h1>
           <p class="about-us-text">
-            Kanskje noe om at en fyr startet opp et firma i sånn og sånn
-            årstall? Og at han bryr seg om ditten og datten innenfor gaming. Så
-            og så mange ansatte. Ab maiores quod.
+            GameHub was founded by <strong>Michael Blopp </strong>in 2016 with a clear mission: to be your go-to destination for purchasing video games online. 
           </p>
+          <p class="about-us-text">We've dedicated ourselves to providing gamers with a seamless and convenient shopping experience for their favorite titles.</p>
           <h2 class="universe-of-games" data-value="The universe of games">
             The universe of games
           </h2>
 
           <p class="about-us-text">
-            Ut tempora recusandae et nesciunt ratione non temporibus earum qui
-            blanditiis laborum et veritatis ipsa et accusamus rerum.
+            Step into GameHub's vast universe of games. Here, you'll enter a realm where limitless adventures are at your fingertips. Explore, select, and embark on new gaming journeys with every choice you make..
           </p>
 
           <p class="about-us-text">
-            Kort setning om slogan til Gamehub? Sånn typ like langt som denne
-            teksten her, sånn at det ikke ser rart ut.
+  
           </p>
         </article>
     

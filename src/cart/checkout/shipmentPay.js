@@ -7,23 +7,25 @@ export default function shipmentPay(container) {
   shippingText.textContent = "Shipping options";
 
   const option1 = document.createElement("div");
-  option1.classList.add("radio-option-1");
+  option1.classList.add("radio-options");
   const label1 = document.createElement("label");
   label1.textContent = "Normal shipping (4-7 days) - FREE";
-  label1.value = 0;
+
   const radio1 = document.createElement("input");
   radio1.type = "radio";
   radio1.name = "shipping-option";
   radio1.checked = "checked";
+  radio1.dataset.price = 0;
 
   const option2 = document.createElement("div");
-  option2.classList.add("radio-option-2");
+  option2.classList.add("radio-options");
   const label2 = document.createElement("label");
   label2.textContent = "Express shipping (1-3 days) - $9.99";
-  label2.value = 9.99;
+
   const radio2 = document.createElement("input");
   radio2.type = "radio";
   radio2.name = "shipping-option";
+  radio2.dataset.price = 9.99;
 
   option1.appendChild(radio1);
   option1.appendChild(label1);
@@ -77,14 +79,9 @@ export default function shipmentPay(container) {
   payNowBtn.classList.add("pay-now-btn");
   payNowBtn.textContent = "Pay now";
 
-  expAndCcv.appendChild(expDate);
-  expAndCcv.appendChild(cardCcv);
+  expAndCcv.append(expDate, cardCcv);
 
-  paymentForm.appendChild(paymentHeader);
-  paymentForm.appendChild(cardName);
-  paymentForm.appendChild(cardNumber);
-  paymentForm.appendChild(expAndCcv);
-  paymentForm.appendChild(payNowBtn);
+  paymentForm.append(paymentHeader, cardName, cardNumber, expAndCcv, payNowBtn);
 
   container.appendChild(paymentForm);
 }

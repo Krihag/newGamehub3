@@ -212,8 +212,7 @@ main {
   font-family: "DM Sans", sans-serif;
 }
 
-.radio-option-1,
-.radio-option-2 {
+.radio-options {
   display: flex;
   gap: 3rem;
   align-items: center;

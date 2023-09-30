@@ -68,7 +68,7 @@ const allSlides = sliderGames.map((game, i) => {
   const button1 = document.createElement("button");
   button1.classList.add("button");
   button1.classList.add("article-buy");
-  button1.textContent = "Buy now";
+  button1.textContent = "Add to cart";
 
   const button2 = document.createElement("button");
   button2.classList.add("button");

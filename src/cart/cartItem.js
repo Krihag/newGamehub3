@@ -9,16 +9,18 @@ export default function cartItem(item, container) {
 
   const img = document.createElement("img");
   img.classList.add("cart-item-img");
-  console.log(item);
+
   img.src = item.img;
   img.alt = item.alt;
+
+  innerDiv.appendChild(img);
+
+  const detailsContainer = document.createElement("div");
+  detailsContainer.classList.add("cart-item-details");
 
   const itemName = document.createElement("p");
   itemName.classList.add("cart-item-name");
   itemName.textContent = item.name;
-
-  innerDiv.appendChild(img);
-  innerDiv.appendChild(itemName);
 
   const price = document.createElement("p");
   price.textContent = "$" + item.price;
@@ -38,20 +40,29 @@ export default function cartItem(item, container) {
   const totalPrice = document.createElement("p");
   totalPrice.textContent = `$${itemTotal}`;
 
-  cartItemDiv.append(innerDiv, price, quantityContainer, totalPrice);
+  detailsContainer.append(itemName, price, quantityContainer, totalPrice);
+  cartItemDiv.append(innerDiv, detailsContainer);
 
   decreaseBtn.addEventListener("click", (e) => {
     e.preventDefault();
     item.quantity--;
     updateCart(item);
+    if (item.quantity <= 0) cartItemDiv.remove();
+    else {
+      itemQty.textContent = item.quantity;
+      itemTotal = (item.quantity * item.price).toFixed(2);
+      totalPrice.textContent = `$${itemTotal}`;
+    }
   });
 
   increaseBtn.addEventListener("click", (e) => {
     e.preventDefault();
     item.quantity++;
     updateCart(item);
+    itemQty.textContent = item.quantity;
+    itemTotal = (item.quantity * item.price).toFixed(2);
+    totalPrice.textContent = `$${itemTotal}`;
   });
 
-  console.log(cartItemDiv);
   container.append(cartItemDiv);
 }

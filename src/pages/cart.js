@@ -1,11 +1,8 @@
-import fetchGames from "../games/fetchGames.js";
 import cartItem from "../cart/cartItem.js";
 
 const cartImage = document.querySelector(".cart-item-img");
 const cartContainer = document.querySelector(".cart-items-container");
-const totalPriceContainer = document.querySelector("h1 span");
-
-// const games = await fetchGames();
+const totalPriceContainer = document.querySelector(".cart-total span");
 
 const getPrevGames = localStorage.getItem("cartItems");
 let gamesPrevAdded = JSON.parse(getPrevGames);

@@ -13,14 +13,14 @@ main {
 }
 
 .about-us-text {
-  max-width: 400px;
-  margin-top: 2rem;
+  max-width: 420px;
+  margin-top: 1.5rem;
   line-height: 1.8rem;
   margin-left: 0;
 }
 
 .about-us-section article {
-  padding-top: 6rem;
+  padding-top: 2rem;
 }
 
 h1 {
