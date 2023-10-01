@@ -1,4 +1,5 @@
 import hamburgerMenu from "./effects/hamburgerMenu.js";
+import displayCart from "./cart/displayCart.js";
 
 const footerBtn = document.querySelector(".subscribe-button");
 const footerInput = document.querySelector(".footer-input");
@@ -15,3 +16,4 @@ footerBtn.addEventListener("click", function (e) {
   footerBtn.style.transition = ".5s ease-in";
 });
 hamburgerMenu();
+displayCart();

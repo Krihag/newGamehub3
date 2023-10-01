@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/about.css" />
-    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/cart.css" />
 
     <script defer type="module" src="/src/pages/about.js"></script>
   </head>
@@ -33,26 +33,29 @@
       <a href="../index.html" class="logo">
         <img src="/img/gamehub-logo.png" alt="gamehub logo" />
       </a>
-      <nav class="nav-hidden">
-        
-        <ul class="nav-pages">
-          <li><a href="games.html">Games</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About us</a></li>
-        </ul>
-        <ul class="search-and-cart">
-          <div>
-           <input type="search">
-           <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+      <nav>
+        <div class="search-bar nav-hidden">
+          <input type="search" />
+          <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <div class="pages-and-cart">
+          <ul class="nav-pages nav-hidden">
+            <li><a href="games.html">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About us</a></li>
+          </ul>
+          <div class="hamburger-cart">
+            <div class="hamburger-menu">
+              <i class="fa-solid fa-bars menu-open"></i>
+              <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
+            </div>
+            <a href="#" class="shopping-cart-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
           </div>
-            <a href="#" class="shopping-cart-icon"> Cart <i class="fa-solid fa-cart-shopping"></i> </a>
-          </li>
-        </ul>
+        </div>
       </nav>
-      <div class="hamburger-menu">
-        <i class="fa-solid fa-bars menu-open"></i>
-        <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
-      </div>
+
       <div class="cart-container cart-visibility">
         <div class="cart-items-section">
           <div class="cart-items-container"></div>
@@ -65,34 +68,35 @@
           </div>
         </div>
       </div>
-  
-  
     </header>
-
 
     <main>
       <section class="about-us-section">
         <article>
           <h1 data-value="About gamehub">About gamehub</h1>
           <p class="about-us-text">
-            GameHub was founded by <strong>Michael Blopp </strong>in 2016 with a clear mission: to be your go-to destination for purchasing video games online. 
+            GameHub was founded by <strong>Michael Blopp </strong>in 2016 with a
+            clear mission: to be your go-to destination for purchasing video
+            games online.
           </p>
-          <p class="about-us-text">We've dedicated ourselves to providing gamers with a seamless and convenient shopping experience for their favorite titles.</p>
+          <p class="about-us-text">
+            We've dedicated ourselves to providing gamers with a seamless and
+            convenient shopping experience for their favorite titles.
+          </p>
           <h2 class="universe-of-games" data-value="The universe of games">
             The universe of games
           </h2>
 
           <p class="about-us-text">
-            Step into GameHub's vast universe of games. Here, you'll enter a realm where limitless adventures are at your fingertips. Explore, select, and embark on new gaming journeys with every choice you make..
+            Step into GameHub's vast universe of games. Here, you'll enter a
+            realm where limitless adventures are at your fingertips. Explore,
+            select, and embark on new gaming journeys with every choice you
+            make..
           </p>
 
-          <p class="about-us-text">
-  
-          </p>
+          <p class="about-us-text"></p>
         </article>
-    
       </section>
-
     </main>
     <footer>
       <div class="footer-newsletter">

@@ -73,6 +73,11 @@ export default function shipmentPay(container) {
   cardCcv.classList.add("card-ccv");
   cardCcv.placeholder = "CVC / CCV:";
 
+  const totalPriceContainer = document.createElement("p");
+  totalPriceContainer.classList.add("pay-total-price");
+  totalPriceContainer.textContent = "Total: ";
+  const totalPrice = document.createElement("span");
+
   const payNowBtn = document.createElement("button");
   payNowBtn.classList.add("button");
   payNowBtn.classList.add("pink-btn");
@@ -81,7 +86,16 @@ export default function shipmentPay(container) {
 
   expAndCcv.append(expDate, cardCcv);
 
-  paymentForm.append(paymentHeader, cardName, cardNumber, expAndCcv, payNowBtn);
+  totalPriceContainer.appendChild(totalPrice);
+
+  paymentForm.append(
+    paymentHeader,
+    cardName,
+    cardNumber,
+    expAndCcv,
+    totalPriceContainer,
+    payNowBtn
+  );
 
   container.appendChild(paymentForm);
 }

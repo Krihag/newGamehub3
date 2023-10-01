@@ -78,12 +78,12 @@ nav {
   /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 nav ul {
-  gap: 2.5rem;
+  gap: 2rem;
   font-size: 1.25rem;
 }
 
@@ -123,6 +123,15 @@ header nav input {
   color: #fff;
   font-size: 2.5rem;
   cursor: pointer;
+}
+
+.shopping-cart-icon i {
+  font-size: 1.8rem;
+}
+
+.pages-and-cart {
+  display: flex;
+  gap: 3rem;
 }
 
 /* best sellers */
@@ -367,6 +376,9 @@ footer {
   } */
 }
 @media (max-width: 1300px) {
+  header nav {
+    flex-direction: column;
+  }
 }
 @media (max-width: 1100px) {
   footer {
@@ -388,40 +400,67 @@ footer {
 
 @media (max-width: 800px) {
   main {
-    padding-top: 6rem;
+    /* padding-top: 6rem; */
   }
   .main-header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     padding: 1.2rem 7%;
     display: flex;
     align-items: center;
   }
-  nav ul {
-    right: 0;
-    flex-direction: column;
 
-    gap: 0.5rem;
-    width: 100%;
+  nav ul {
   }
 
-  header nav {
+  header nav ul {
+    right: 0;
+
+    gap: 0.5rem;
+    top: 7rem;
+    left: 0;
     position: absolute;
     width: 100%;
-    top: 7rem;
-
-    left: 0;
     background: #4a3587;
-    padding: 4rem 0;
+    padding: 4rem 0 6rem;
     flex-direction: column;
     text-align: center;
     border-bottom: 1px solid #190e41;
+    /* height: 300px; */
+    z-index: 999;
   }
 
+  header .search-bar {
+    position: absolute;
+    left: 10%;
+    top: 23.5rem;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    z-index: 9999;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hamburger-cart {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: end;
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+  }
   nav ul li {
     display: block;
     width: 100%;
   }
+  /* 
+  .shopping-cart-icon i {
+    font-size: 2.5rem;
+  } */
 
   nav ul li a {
     padding: 1rem 0;
@@ -432,13 +471,13 @@ footer {
     gap: 2rem;
   }
 
-  .search-and-cart input {
+  /* .search-and-cart input {
     padding: 0.3rem;
     width: 90%;
     max-width: 450px;
     margin: 0;
     font-size: 1.3rem;
-  }
+  } */
 
   .hamburger-menu {
     display: inline-block;
@@ -446,7 +485,11 @@ footer {
 
   .nav-hidden {
     display: none;
+    visibility: hidden;
   }
+}
+
+@media (max-width: 600px) {
 }
 
 @media (max-width: 500px) {

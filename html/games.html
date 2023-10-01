@@ -18,36 +18,54 @@
     <!-- <link rel="parallax" href="css/index.css" /> -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/games.css" />
+    <link rel="stylesheet" href="../css/cart.css">
     <!-- <link rel="stylesheet" href="css/index.css" /> -->
 
     <script defer type="module" src="../src/script.js"></script>
     <script defer type="module" src="../src/pages/games.js"></script>
+
   </head>
   <body>
     <header class="main-header">
       <a href="../index.html" class="logo">
         <img src="/img/gamehub-logo.png" alt="gamehub logo" />
       </a>
-      <nav class="nav-hidden">
-        
-        <ul class="nav-pages">
-          <li><a href="games.html">Games</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About us</a></li>
-        </ul>
-        <ul class="search-and-cart">
-          <div>
-           <input type="search">
-           <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+      <nav>
+        <div class="search-bar nav-hidden">
+          <input type="search" />
+          <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <div class="pages-and-cart">
+          <ul class="nav-pages nav-hidden">
+            <li><a href="games.html">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About us</a></li>
+          </ul>
+          <div class="hamburger-cart">
+            <div class="hamburger-menu">
+              <i class="fa-solid fa-bars menu-open"></i>
+              <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
+            </div>
+            <a href="#" class="shopping-cart-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
           </div>
-            <a href="#"> Cart <i class="fa-solid fa-cart-shopping"></i> </a>
-          </li>
-        </ul>
+        </div>
       </nav>
-      <div class="hamburger-menu">
-        <i class="fa-solid fa-bars menu-open"></i>
-        <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
+
+      <div class="cart-container cart-visibility">
+        <div class="cart-items-section">
+          <div class="cart-items-container"></div>
+        </div>
+        <div class="checkout-section">
+          <p class="cart-total">Cart total <span></span></p>
+          <div class="cart-btns">
+            <a href="checkout.html" class="pink-btn button">to checkout</a>
+            <button class="transparent-btn button shop-more">Shop more</button>
+          </div>
+        </div>
       </div>
+  
     </header>
     <main>
       <section class="slider-section">

@@ -1,6 +1,7 @@
 import summaryItem from "../cart/checkout/summaryItem.js";
 import switchText from "../effects/switchText.js";
 import shipmentPay from "../cart/checkout/shipmentPay.js";
+import checkoutComplete from "../cart/checkout/checkoutComplete.js";
 
 const itemsContainer = document.querySelector(".cart-items-container");
 const moveShip = document.querySelector(".checkout-ship");
@@ -44,6 +45,8 @@ paymentBtn.addEventListener("click", function (e) {
 
   setTimeout(() => {
     shipmentPay(mainContentContainer);
+    const paymentTotalPrice = document.querySelector(".pay-total-price span");
+    paymentTotalPrice.textContent = "$" + subtotal;
 
     const radioBtns = document.querySelectorAll(".radio-options");
     radioBtns.forEach((btn) =>
@@ -51,6 +54,7 @@ paymentBtn.addEventListener("click", function (e) {
         const updatedPrice = Number(subtotal) + Number(e.target.dataset.price);
         shipPrice.textContent = "$" + e.target.dataset.price;
         totalPriceContainer.textContent = "$" + updatedPrice.toFixed(2);
+        paymentTotalPrice.textContent = "$" + updatedPrice.toFixed(2);
       })
     );
     shipContainer.style.position = "static";
@@ -80,6 +84,9 @@ paymentBtn.addEventListener("click", function (e) {
           5000
         );
         shipContainer.style.position = "static";
+
+        checkoutComplete(mainContentContainer);
+        orderSummary.style.display = "none";
       }, 3200);
     });
   }, 3200);

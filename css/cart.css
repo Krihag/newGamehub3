@@ -113,3 +113,22 @@
 .cart-visibility {
   visibility: hidden;
 }
+
+@media (max-width: 1300px) {
+  .cart-container {
+    top: 11rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .cart-container {
+    flex-direction: column;
+    top: 7.2rem;
+  }
+  .cart-container {
+    padding: 0;
+  }
+  .cart-items-section {
+    padding: 2rem;
+  }
+}

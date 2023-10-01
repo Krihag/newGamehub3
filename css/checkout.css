@@ -267,6 +267,55 @@ input[type="radio"]:checked:after {
   width: 30%;
 }
 .pay-now-btn {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   width: 250px;
+}
+.pay-total-price {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  display: flex;
+  gap: 3.5rem;
+  font-weight: 600;
+  margin-top: 4rem;
+}
+
+/* ORDER COMPLETE */
+
+.order-complete-container {
+  padding-top: 6rem;
+
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
+  gap: 4rem;
+  font-size: 2.3rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  padding-right: 10%;
+}
+
+.order-complete-container h2 {
+  font-size: 2.5rem;
+}
+
+.order-number {
+  font-weight: 700;
+  color: #ec4ca3;
+}
+
+.email-confirm-text {
+  max-width: 550px;
+}
+
+.order-btn-container {
+  display: flex;
+  gap: 2rem;
+}
+.order-btn-container button {
+  font-size: 1.6rem;
 }
