@@ -16,6 +16,7 @@ export default function updateCart(item) {
       const itemSum = cur.price * cur.quantity;
       return acc + itemSum;
     }, 0);
+    console.log(item);
     localStorage.setItem("totalCart", totalSum);
     totalPriceContainer.textContent = "$" + totalSum.toFixed(2);
   }

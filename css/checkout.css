@@ -10,7 +10,7 @@ header {
 }
 
 main {
-  background: #c9bcfb;
+  background: #d1d7fd;
   flex: 1;
   font-size: 1.3rem;
   height: 100%;
@@ -91,7 +91,7 @@ main {
   border-radius: 1.1rem;
   border: none;
   outline: none;
-  background: #efe5ff;
+  background: #ffffff;
 }
 .city-and-zip {
   display: flex;
@@ -126,7 +126,7 @@ main {
 /* ORDER SUMMARY */
 
 .order-summary-section {
-  background: #beaefc;
+  background: #c3c8f8;
   width: 520px;
   padding: 5rem 4rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -171,7 +171,7 @@ main {
 }
 
 .border-bottom {
-  border-bottom: 3px solid #9c88eb;
+  border-bottom: 3px solid #96a7e0;
   transition: border 3s ease;
 }
 .item-img {

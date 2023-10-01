@@ -75,7 +75,7 @@ paymentBtn.addEventListener("click", function (e) {
       shipContainer.style.position = "fixed";
       moveShip.style.transform = "translateX(25.5rem)";
       orderSummary.style.transform = "translateX(102%)";
-      main.style.backgroundColor = "#FEE9D6";
+      main.style.backgroundColor = "#fdffe8";
 
       setTimeout(() => {
         textInterval = switchText(

@@ -1,4 +1,5 @@
 import fetchGames from "../games/fetchGames.js";
+import addToCart from "../cart/addToCart.js";
 
 const gameContainer = document.querySelector(".game-description-section");
 
@@ -47,30 +48,38 @@ priceHeader.textContent = "Price: ";
 const priceSpan = document.createElement("span");
 priceSpan.textContent = `$${game.price}`;
 
-const quantityAndDevice = document.createElement("div");
-quantityAndDevice.classList.add("quantity-and-device");
-
 const quantityContainer = document.createElement("div");
 quantityContainer.classList.add("quantity-container");
 const quantityText = document.createElement("p");
 quantityText.classList.add("semi-bold");
-quantityText.textContent = "Quantity: ";
-const quantityInput = document.createElement("input");
+quantityText.textContent = "Qty: ";
 
-const deviceContainer = document.createElement("div");
-deviceContainer.classList.add("device-container");
-const deviceText = document.createElement("p");
-deviceText.classList.add("semi-bold");
-deviceText.textContent = "Devices: ";
-const deviceInput1 = document.createElement("button");
-deviceInput1.textContent = "Playstation";
-const deviceInput2 = document.createElement("button");
-deviceInput2.textContent = "X-box";
+const changeQuantity = document.createElement("div");
+changeQuantity.classList.add("change-quantity-container");
 
-const buyBtn = document.createElement("button");
-buyBtn.classList.add("buy-now-btn");
-buyBtn.classList.add("add-to-cart");
-buyBtn.textContent = "Buy now";
+const decreaseBtn = document.createElement("button");
+decreaseBtn.textContent = "-";
+const itemQty = document.createElement("p");
+itemQty.classList.add("item-qty");
+itemQty.textContent = 1;
+const increaseBtn = document.createElement("button");
+increaseBtn.textContent = "+";
+
+const totalPriceContainer = document.createElement("p");
+totalPriceContainer.classList.add("total-price-container");
+totalPriceContainer.classList.add("semi-bold");
+totalPriceContainer.textContent = "Total: ";
+
+const totalPrice = document.createElement("span");
+totalPrice.textContent = "$" + game.price;
+
+const addToCartBtn = document.createElement("button");
+addToCartBtn.classList.add("button");
+addToCartBtn.classList.add("pink-btn");
+addToCartBtn.classList.add("add-to-cart");
+addToCartBtn.textContent = "Add to cart";
+
+totalPriceContainer.append(totalPrice);
 
 gameContainer.append(container);
 container.append(imageAndDetails);
@@ -80,19 +89,40 @@ headerDetails.append(
   headerText,
   gameDescription,
   genreAndPrice,
-  quantityAndDevice,
-  buyBtn
+  quantityContainer,
+  totalPriceContainer,
+  addToCartBtn
 );
 
 genreAndPrice.append(genreHeader, priceHeader);
 genreHeader.append(genreSpan);
 priceHeader.append(priceSpan);
-quantityAndDevice.append(quantityContainer, deviceContainer);
-quantityContainer.append(quantityText, quantityInput);
 
-deviceContainer.append(deviceText, deviceInput1, deviceInput2);
+changeQuantity.append(decreaseBtn, itemQty, increaseBtn);
+quantityContainer.append(quantityText, changeQuantity);
 
+increaseBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  itemQty.textContent++;
+  const updatedTotal = game.price * itemQty.textContent;
+  totalPrice.textContent = "$" + updatedTotal.toFixed(2);
+});
+
+decreaseBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (itemQty.textContent > 1) {
+    itemQty.textContent--;
+
+    const updatedTotal = game.price * itemQty.textContent;
+    totalPrice.textContent = "$" + updatedTotal.toFixed(2);
+    console.log("test");
+  }
+});
 // GAME IMG
 // window.addEventListener("scroll", () => {
 
 // })
+addToCartBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  addToCart(game, Number(itemQty.textContent));
+});

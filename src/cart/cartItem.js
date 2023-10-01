@@ -1,6 +1,6 @@
 import updateCart from "./updateCart.js";
 
-export default function cartItem(item, container) {
+export default function cartItem(item) {
   const cartItemDiv = document.createElement("div");
   cartItemDiv.classList.add("cart-item");
   cartItemDiv.dataset.id = item.id;
@@ -64,5 +64,5 @@ export default function cartItem(item, container) {
     totalPrice.textContent = `$${itemTotal}`;
   });
 
-  container.append(cartItemDiv);
+  return cartItemDiv;
 }

@@ -12,13 +12,14 @@ export default function addToCart(game, quantity = 1) {
   if (gamesPrevAdded) {
     const foundGame = gamesPrevAdded.find((curGame) => {
       if (curGame.id === game.id) {
-        updateCart(curGame);
         return game.id;
       }
     });
 
     if (foundGame) {
+      console.log(quantity);
       foundGame.quantity += quantity;
+      updateCart(foundGame);
     } else {
       newItem = {
         id: game.id,
