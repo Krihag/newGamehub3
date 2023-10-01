@@ -29,6 +29,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  overflow: none;
+}
+
 .button {
   color: #2d2267;
   border-radius: 1rem;

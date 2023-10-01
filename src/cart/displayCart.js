@@ -23,13 +23,13 @@ export default function displayCart() {
 
   cartIcon.addEventListener("click", function (e) {
     e.preventDefault();
-    fullCartContainer.classList.remove("cart-visibility");
+    fullCartContainer.classList.toggle("cart-visibility");
     gamesPrevAdded.forEach((game) => updateCart(game));
   });
 
-  document.addEventListener("click", function (e) {
-    if (fullCartContainer.contains(e.target) || cartIcon.contains(e.target))
-      return;
-    else fullCartContainer.classList.add("cart-visibility");
-  });
+  // document.addEventListener("click", function (e) {
+  //   if (fullCartContainer.contains(e.target) || cartIcon.contains(e.target))
+  //     return;
+  //   else fullCartContainer.classList.add("cart-visibility");
+  // });
 }
