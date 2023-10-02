@@ -42,6 +42,7 @@ main {
   font-size: 1.2rem;
   padding: 1.1rem 2.5rem;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .transparent-btn {
@@ -304,6 +305,9 @@ footer {
   font-size: 1.2rem;
 }
 
+.email-subscribe input::placeholder {
+  font-family: "Raleway", sans-serif;
+}
 .email-subscribe button {
   width: 140px;
   border: none;
@@ -357,6 +361,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer-icons i:hover {
+  background: #fb5cac;
+  transform: rotate(360deg);
+  transition: 0.4s;
 }
 /* 
 .now-sale-text {

@@ -52,6 +52,7 @@
   padding: 0.6rem 0.9rem;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
 }
 .article-content-and-img {
   display: flex;
@@ -61,6 +62,7 @@
   border-radius: 2rem;
   /* height: 500px; */
   background: #ebdfff;
+  box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
 }
 
 .article-content-and-img img {
@@ -178,6 +180,7 @@ section {
   border-radius: 3rem;
   margin: auto;
   overflow: none;
+  box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
 }
 
 .sale-content-container {
