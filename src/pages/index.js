@@ -111,3 +111,10 @@ addToCartBtn.forEach((btn) => {
     addToCart(foundGame);
   });
 });
+
+const cartIcon = document.querySelector(".shopping-cart-icon");
+const mainHeader = document.querySelector(".main-header");
+
+// cartIcon.addEventListener("click", (e) => {
+//   mainHeader.classList.toggle("index-header");
+// });

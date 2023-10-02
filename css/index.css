@@ -244,6 +244,11 @@ section {
   }
 }
 
+/* CART */
+.checkout-section {
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 1000px) {
   .article-content-and-img {
     flex-direction: column;

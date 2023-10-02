@@ -16,46 +16,67 @@
     />
 
     <!-- Hotjar Tracking Code for https://dynamic-cendol-bc46e1.netlify.app/ -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3676202,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3676202, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
 
     <link rel="stylesheet" href="css/parallaxImg.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/chat.css" />
+    <link rel="stylesheet" href="css/cart.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <header class="index-header ">
-      <a href="../index.html" class="logo">
+    <header class="main-header index-header">
+      <a href="#" class="logo">
         <img src="/img/gamehub-logo.png" alt="gamehub logo" />
       </a>
-      <nav class="nav-hidden">
-        
-        <ul class="nav-pages">
-          <li><a href="/html/games.html">Games</a></li>
-          <li><a href="html/contact.html">Contact</a></li>
-          <li><a href="html/about.html">About us</a></li>
-        </ul>
-        <ul class="search-and-cart">
-          <div>
-           <input type="search">
-           <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+      <nav>
+        <div class="search-bar nav-hidden">
+          <input type="search" />
+          <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <div class="pages-and-cart">
+          <ul class="nav-pages nav-hidden">
+            <li><a href="/html/games.html">Games</a></li>
+            <li><a href="/html/contact.html">Contact</a></li>
+            <li><a href="/html/about.html">About us</a></li>
+          </ul>
+          <div class="hamburger-cart">
+            <div class="hamburger-menu">
+              <i class="fa-solid fa-bars menu-open"></i>
+              <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
+            </div>
+            <a href="#" class="shopping-cart-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
           </div>
-            <a href="html/cart.html"> Cart <i class="fa-solid fa-cart-shopping"></i> </a>
-          </li>
-        </ul>
+        </div>
       </nav>
-      <div class="hamburger-menu">
-        <i class="fa-solid fa-bars menu-open"></i>
-        <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
+
+      <div class="cart-container cart-visibility">
+        <div class="cart-items-section">
+          <div class="cart-items-container"></div>
+        </div>
+        <div class="checkout-section">
+          <p class="cart-total">Cart total <span></span></p>
+          <div class="cart-btns">
+            <a href="checkout.html" class="pink-btn button">to checkout</a>
+            <button class="transparent-btn button shop-more">Shop more</button>
+          </div>
+        </div>
       </div>
     </header>
     <div class="full-chat-container">
@@ -325,7 +346,9 @@
       <section class="bestsellers-section games-section">
         <div class="header-and-see-more">
           <h2>Bestsellers</h2>
-          <a href="html/games.html" class="see-all-games semi-bold pink-bottom-border"
+          <a
+            href="html/games.html"
+            class="see-all-games semi-bold pink-bottom-border"
             >all games</a
           >
         </div>
@@ -343,7 +366,9 @@
               <p>in different genres and price-ranges!</p>
             </div>
             <p class="semi-bold sale-discount-text">UP TO 80% DISCOUNT</p>
-            <a href="/html/games.html">   <button class="button">go to sale</button></a>
+            <a href="/html/games.html">
+              <button class="button">go to sale</button></a
+            >
           </div>
           <div class="sale-img-container"></div>
         </article>
