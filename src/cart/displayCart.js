@@ -20,6 +20,10 @@ export default function displayCart() {
   const page3 = document.createElement("div");
   const page4 = document.createElement("div");
 
+  page2.style.display = "none";
+  page3.style.display = "none";
+  page4.style.display = "none";
+
   let cartPage = 1;
 
   cartItemsList.forEach((item, i) => {
@@ -28,30 +32,26 @@ export default function displayCart() {
       if (i === 3) {
         const BtnsContainer = cartPageBtns(cartPage, page1, cartItemsContainer);
         cartPage++;
-        page2.appendChild(cartPageBtns(cartPage, cartItemsContainer));
+        page2.appendChild(cartPageBtns(cartPage));
         page1.appendChild(BtnsContainer);
       }
       page2.appendChild(item);
     } else if (i <= 8) {
       if (i === 6) {
         cartPage++;
-        page3.appendChild(cartPageBtns(cartPage, cartItemsContainer));
+        page3.appendChild(cartPageBtns(cartPage));
       }
 
       page3.appendChild(item);
     } else if (i > 8) {
       if (i === 9) {
         cartPage++;
-        page4.appendChild(cartPageBtns(cartPage, cartItemsContainer));
+        page4.appendChild(cartPageBtns(cartPage));
       }
 
       page4.appendChild(item);
     }
   });
-
-  page2.style.display = "none";
-  page3.style.display = "none";
-  page4.style.display = "none";
 
   cartItemsContainer.append(page1, page2, page3, page4);
 
@@ -108,7 +108,7 @@ export default function displayCart() {
   cartIcon.addEventListener("click", function (e) {
     e.preventDefault();
     fullCartContainer.classList.toggle("cart-visibility");
-    gamesPrevAdded.forEach((game) => updateCart(game));
+    // gamesPrevAdded.forEach((game) => updateCart(game));
   });
   shopMoreBtn.addEventListener("click", function (e) {
     e.preventDefault();

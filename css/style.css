@@ -161,7 +161,6 @@ header nav input {
   max-width: 1400px;
   align-items: center;
   position: relative;
-  justify-content: center;
 }
 
 .game-cover {
@@ -385,9 +384,9 @@ footer {
 } */
 
 @media (max-width: 1600px) {
-  /* .games-section > * {
+  .games-section > * {
     max-width: 680px;
-  } */
+  }
 }
 @media (max-width: 1300px) {
   header nav {
@@ -423,9 +422,6 @@ footer {
     padding: 1.2rem 7%;
     display: flex;
     align-items: center;
-  }
-
-  nav ul {
   }
 
   header nav ul {
@@ -501,6 +497,10 @@ footer {
     display: none;
     visibility: hidden;
   }
+
+  .games-container {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -512,6 +512,19 @@ footer {
   }
   .email-subscribe {
     flex-direction: column;
+  }
+  .logo img {
+    width: 130px;
+  }
+
+  .hamburger-cart {
+    top: 1.5rem;
+    gap: 2rem;
+    right: 2rem;
+  }
+
+  header nav ul {
+    top: 6.2rem;
   }
   .email-subscribe button {
     width: 100%;

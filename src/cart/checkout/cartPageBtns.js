@@ -1,4 +1,4 @@
-export default function cartPageBtns(page, curPage, mainContainer) {
+export default function cartPageBtns(page) {
   const container = document.createElement("div");
   container.classList.add("cart-page-btns");
   container.classList.add(`page-${page}`);

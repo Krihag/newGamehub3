@@ -204,7 +204,7 @@ h3,
   align-items: center;
   justify-content: space-between;
   padding-top: 10%;
-
+  gap: 3rem;
   max-width: 100%;
 
   position: relative;
@@ -215,7 +215,7 @@ h3,
   display: flex;
   justify-content: space-between;
 
-  width: 250px;
+  width: 220px;
 
   max-width: 35%;
 }
@@ -266,11 +266,11 @@ h3,
 }
 
 .cyberpunk-1 {
-  left: 2.5rem;
+  left: 3rem;
 }
 
 .cyberpunk-2 {
-  left: -1rem;
+  left: -2rem;
 }
 
 .cyberpunk-3 {

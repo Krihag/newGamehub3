@@ -19,8 +19,8 @@ export default function chat() {
   // const bots = chatBot()
   const hans = {
     name: "Hans",
-    firstText: "I am not interested in talking to you Human. Begone pest!",
-    secondText: "I am warning you, do not talk to me, I will bite!",
+    firstText: "I am not interested in talking to you Human. Begone!",
+    secondText: "I am warning you, do not talk to me.. I will bite!",
 
     bites: function () {},
     closeChat: false,
