@@ -386,6 +386,7 @@ footer {
 @media (max-width: 1600px) {
   .games-section > * {
     max-width: 680px;
+    width: 100%;
   }
 }
 @media (max-width: 1300px) {

@@ -161,9 +161,11 @@
     display: none;
   }
   .bg-img-small {
-    background: url(../img/backgroundSmall.JPG) no-repeat;
-    background-position: right;
+    background: url(../img/backgroundImgSmall.JPG) no-repeat;
+    background-position: bottom right;
+    width: 100%;
     height: 100vh;
+    background-size: cover;
   }
 }
 

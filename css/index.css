@@ -46,10 +46,10 @@
 }
 
 .trending-container i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #2d2267;
-  background: #ebdfff;
-  padding: 0.6rem 0.9rem;
+  background: #ec4ca3;
+  padding: 0.8rem 1.1rem;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;

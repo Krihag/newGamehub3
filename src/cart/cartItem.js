@@ -20,7 +20,7 @@ export default function cartItem(item) {
 
   const itemName = document.createElement("p");
   itemName.classList.add("cart-item-name");
-  itemName.textContent = item.name;
+  itemName.textContent = item.name.split(" ").slice(0, 2).join(" ");
 
   const price = document.createElement("p");
   price.textContent = "$" + item.price;
