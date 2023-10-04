@@ -1,5 +1,5 @@
 const hamburgerIcon = document.querySelector(".hamburger-menu");
-const navPages = document.querySelector("header nav ul");
+const navPages = document.querySelector(".nav-pages");
 const menuOpen = document.querySelector(".menu-open");
 const menuClose = document.querySelector(".menu-close");
 const searchBar = document.querySelector(".search-bar");

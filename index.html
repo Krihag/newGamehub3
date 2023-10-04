@@ -45,8 +45,12 @@
       </a>
       <nav>
         <div class="search-bar nav-hidden">
-          <input type="search" />
+          <input type="search" class="search-bar" />
+
           <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
+          <div class="results-container">
+            <ul class="search-list" id="list"></ul>
+          </div>
         </div>
         <div class="pages-and-cart">
           <ul class="nav-pages nav-hidden">
@@ -60,6 +64,7 @@
               <i class="fa-solid fa-xmark nav-hidden menu-close"></i>
             </div>
             <a href="#" class="shopping-cart-icon">
+              <div class="cart-num-items"></div>
               <i class="fa-solid fa-cart-shopping"></i>
             </a>
           </div>

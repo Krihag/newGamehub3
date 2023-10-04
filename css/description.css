@@ -1,12 +1,12 @@
 .game-description-section {
   background: #9163de;
-  height: 100vh;
+
   font-family: "DM Sans", sans-serif;
 }
 
 .description-top-half {
   background: url("../img/game-details-background.jpg") no-repeat;
-
+  min-height: 80vh;
   background-size: initial;
 
   height: 100%;
@@ -90,7 +90,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80px;
+  width: 90px;
 }
 .change-quantity-container button {
   height: 1.6rem;
@@ -113,4 +113,34 @@
 }
 .add-to-cart {
   max-width: 305px;
+}
+
+@media (max-width: 800px) {
+  .description-top-half {
+    background: #ebdfff;
+    padding-bottom: 5rem;
+    min-height: 0;
+  }
+  .image-and-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  .image-and-details img {
+    width: 280px;
+    transform: rotate(0deg);
+  }
+
+  .total-price-container,
+  .quantity-container,
+  .genre-and-price p,
+  .header-details {
+    width: 250px;
+  }
+  .change-quantity-container {
+    width: 90px;
+  }
+  .header-details {
+    gap: 2rem;
+  }
 }

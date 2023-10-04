@@ -6,10 +6,11 @@ main {
 .about-us-section {
   background: url("../img/gamehub-founder.png") no-repeat;
   max-width: 90%;
-  height: 1000px;
+
   margin-left: auto;
   background-size: cover;
   font-size: 1.3rem;
+  min-height: 80vh;
 }
 
 .about-us-text {
@@ -35,4 +36,52 @@ h1 {
 .universe-of-games {
   margin-top: 5rem;
   font-size: 1.6rem;
+}
+
+@media (max-width: 1100px) {
+  .about-us-section {
+    background: transparent;
+    max-width: 100%;
+    min-height: 0;
+  }
+
+  h1 {
+    width: fit-content;
+  }
+
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 0 1rem 2rem;
+    margin: auto;
+    max-width: 600px;
+  }
+
+  .about-us-text {
+    max-width: 600px;
+  }
+  .img-mobile {
+    background: url("../img/gamehub-founder.png") no-repeat;
+    background-size: cover;
+    height: 780px;
+    width: 100%;
+
+    text-align: center;
+    background-position: bottom;
+  }
+}
+@media (max-width: 800px) {
+  .img-mobile {
+    height: 550px;
+  }
+
+  .about-us-container {
+    max-width: 450px;
+    width: 80%;
+    margin: auto;
+  }
+  .about-us-text {
+    max-width: 450px;
+  }
 }

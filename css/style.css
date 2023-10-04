@@ -139,6 +139,34 @@ header nav input {
   gap: 3rem;
 }
 
+/* SEARCH BAR */
+.search-bar {
+  position: relative;
+}
+.search-list {
+  position: absolute;
+  top: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background: #ebdfff;
+  gap: 0;
+}
+
+.search-list .search-item {
+  padding: 2rem 2rem;
+  text-transform: none;
+  color: #190e41;
+  border: 1px solid #190e41;
+  text-align: center;
+}
+
+.search-list .search-item:hover {
+  background: #9163de;
+
+  transition: background 0.7s;
+}
+
 /* best sellers */
 
 .games-section {
@@ -316,6 +344,7 @@ footer {
   padding: 0.6rem;
   cursor: pointer;
   margin: auto;
+  color: #251a57;
 }
 
 .footer-contact a {
@@ -425,7 +454,7 @@ footer {
     align-items: center;
   }
 
-  header nav ul {
+  header .nav-pages {
     right: 0;
 
     gap: 0.5rem;
@@ -439,7 +468,7 @@ footer {
     text-align: center;
     border-bottom: 1px solid #190e41;
     /* height: 300px; */
-    z-index: 999;
+    z-index: 99;
   }
 
   header .search-bar {
@@ -452,6 +481,13 @@ footer {
     z-index: 9999;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  .search-list {
+    border: none;
+    width: 80%;
+    left: 10%;
+    text-align: center;
   }
 
   .hamburger-cart {
