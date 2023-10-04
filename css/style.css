@@ -133,6 +133,13 @@ header nav input {
 .shopping-cart-icon i {
   font-size: 1.8rem;
 }
+.shopping-cart-icon .cart-close {
+  font-size: 2.5rem;
+}
+
+.display-icon {
+  display: none;
+}
 
 .pages-and-cart {
   display: flex;
@@ -396,6 +403,7 @@ footer {
   transform: rotate(360deg);
   transition: 0.4s;
 }
+
 /* 
 .now-sale-text {
   animation: textGrow 1.5s infinite ease-in-out;
@@ -474,7 +482,7 @@ footer {
   header .search-bar {
     position: absolute;
     left: 10%;
-    top: 23.5rem;
+    top: 12rem;
     display: flex;
     width: 80%;
     justify-content: center;
@@ -488,6 +496,7 @@ footer {
     width: 80%;
     left: 10%;
     text-align: center;
+    top: 14.2rem;
   }
 
   .hamburger-cart {

@@ -6,7 +6,8 @@ export default function displayCart() {
   const fullCartContainer = document.querySelector(".cart-container");
   const cartItemsContainer = document.querySelector(".cart-items-container");
   const totalPriceContainer = document.querySelector(".cart-total span");
-  const cartIcon = document.querySelector(".shopping-cart-icon");
+  const cartIcon = document.querySelector(".cart-open");
+  const cartClose = document.querySelector(".cart-close");
   const shopMoreBtn = document.querySelector(".shop-more");
 
   const getPrevGames = localStorage.getItem("cartItems");
@@ -105,13 +106,12 @@ export default function displayCart() {
 
   localStorage.setItem("totalCart", totalSum);
 
-  cartIcon.addEventListener("click", function (e) {
-    e.preventDefault();
+  function toggleCart() {
     fullCartContainer.classList.toggle("cart-visibility");
-    // gamesPrevAdded.forEach((game) => updateCart(game));
-  });
-  shopMoreBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    fullCartContainer.classList.toggle("cart-visibility");
-  });
+    cartIcon.classList.toggle("display-icon");
+    cartClose.classList.toggle("display-icon");
+  }
+  cartIcon.addEventListener("click", toggleCart);
+  cartClose.addEventListener("click", toggleCart);
+  shopMoreBtn.addEventListener("click", toggleCart);
 }
