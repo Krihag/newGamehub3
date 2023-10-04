@@ -1,4 +1,4 @@
-import cartPageBtns from "./checkout/cartPageBtns.js ";
+import cartPageBtns from "./displayCart/cartPageBtns.js";
 
 export default function displayNewItem(cartItem, allItems) {
   const length = allItems.length;

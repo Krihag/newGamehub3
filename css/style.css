@@ -569,8 +569,12 @@ footer {
     right: 2rem;
   }
 
-  header nav ul {
-    top: 6.2rem;
+  header .nav-pages {
+    top: 5.2rem;
+  }
+
+  header .search-bar {
+    top: 11rem;
   }
   .email-subscribe button {
     width: 100%;

@@ -26,11 +26,14 @@ main {
   min-height: 80vh;
 }
 .ship-full-container {
-  /* top: 5rem; */
-  /* display: flex;
-  align-items: center; */
+  top: 5rem;
   padding-top: 5rem;
   z-index: 999;
+  /* position: relative; */
+}
+
+.ship-fixed-position {
+  position: fixed;
 }
 .checkout-line {
   background: url(../img/checkout-line.png) no-repeat;
@@ -154,13 +157,24 @@ main {
 }
 
 .cart-summary {
-  margin-top: 7rem;
+  margin-top: 4rem;
+  position: relative;
+  height: 400px;
 }
 .cart-summary h2 {
   font-size: 1.8rem;
 }
 
+.cart-summary .cart-page-btns {
+  bottom: -15rem;
+  right: 5rem;
+}
+
 /* CART ITEM*/
+
+.cart-items-container {
+  width: 400px;
+}
 .cart-item {
   margin-top: 2rem;
   display: flex;
@@ -320,31 +334,67 @@ input[type="radio"]:checked:after {
   font-size: 1.6rem;
 }
 
+.display-order-summary-btn {
+  display: none;
+}
+
 @media (max-width: 1100px) {
   .personal-info-section {
     justify-content: center;
     padding: 1rem 2rem;
   }
-
-  .checkout-forms-container::before {
-    content: "See order summary";
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    border-bottom: 3px solid #ec4ca3;
-    display: inline-block;
-    width: 250px;
-    margin: auto;
-    padding-bottom: 0.7rem;
-    cursor: pointer;
+  .ship-fixed-position {
+    left: 20%;
   }
+
   .order-summary-section {
     position: absolute;
-    width: 90%;
+    width: 100%;
     margin: 0 5%;
     top: 20rem;
     align-content: center;
     justify-content: center;
-    /* display: none; */
+    display: none;
+  }
+
+  .display-order-summary-btn {
+    position: absolute;
+    top: 12rem;
+    display: inline-block;
+    left: 3.5rem;
+    padding: 1rem;
+    width: 300px;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    background: rgba(163, 236, 76, 1);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 1rem;
+    z-index: 1;
+    font-weight: 600;
+  }
+  .order-summary {
+    gap: 0.3rem;
+  }
+
+  .cart-summary {
+    height: 350px;
+    margin-top: 1rem;
+  }
+
+  .cart-summary h2 {
+    text-align: center;
+  }
+  .cart-items-container {
+    margin: autO;
+  }
+
+  .cart-summary .cart-item {
+    margin-top: 0.5rem;
+  }
+
+  .cart-summary .cart-page-btns {
+    bottom: -2.5rem;
+    left: 30%;
   }
 }

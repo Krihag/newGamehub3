@@ -1,5 +1,5 @@
 import hamburgerMenu from "./effects/hamburgerMenu.js";
-import displayCart from "./cart/displayCart.js";
+import displayCart from "./cart/displayCart/displayCart.js";
 import fetchGames from "./games/fetchGames.js";
 
 const footerBtn = document.querySelector(".subscribe-button");

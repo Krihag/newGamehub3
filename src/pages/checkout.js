@@ -2,6 +2,7 @@ import summaryItem from "../cart/checkout/summaryItem.js";
 import switchText from "../effects/switchText.js";
 import shipmentPay from "../cart/checkout/shipmentPay.js";
 import checkoutComplete from "../cart/checkout/checkoutComplete.js";
+import cartPages from "../cart/displayCart/cartPages.js";
 
 const itemsContainer = document.querySelector(".cart-items-container");
 const moveShip = document.querySelector(".checkout-ship");
@@ -16,6 +17,7 @@ const shipContainer = document.querySelector(".ship-full-container ");
 const subTotalContainer = document.querySelector(".subtotal-price");
 const totalPriceContainer = document.querySelector(".total-price");
 const shipPrice = document.querySelector(".shipping-price");
+const orderSummaryBtn = document.querySelector(".display-order-summary-btn");
 
 const getPrevGames = localStorage.getItem("cartItems");
 const cartGames = JSON.parse(getPrevGames);
@@ -27,14 +29,26 @@ totalPriceContainer.textContent = "$" + subtotal;
 
 let textInterval = switchText(shipText, ["Personal Info", "Step one!"], 5000);
 
-cartGames.forEach((game) => summaryItem(game, itemsContainer));
+const cartAllGames = cartGames.map((game) => summaryItem(game, itemsContainer));
+
+if (window.innerWidth < 1100) {
+  cartPages(cartAllGames, itemsContainer, 2);
+} else cartPages(cartAllGames, itemsContainer);
+
+orderSummaryBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  orderSummary.style.display = "block";
+  orderSummaryBtn.style.background = "#f89a9a";
+  orderSummaryBtn.textContent = "Hide order summary";
+});
 
 paymentBtn.addEventListener("click", function (e) {
   e.preventDefault();
   clearInterval(textInterval);
   shipText.textContent = "";
   mainContentContainer.innerHTML = "";
-  shipContainer.style.position = "fixed";
+  shipContainer.classList.toggle("ship-fixed-position");
+  orderSummaryBtn.style.display = "none";
 
   moveShip.style.transform = "translateX(12.5rem)";
   main.style.backgroundColor = "#FFCDF1";
@@ -44,6 +58,8 @@ paymentBtn.addEventListener("click", function (e) {
   borderBottom.forEach((border) => (border.style.borderColor = "#f293c7"));
 
   setTimeout(() => {
+    shipContainer.classList.toggle("ship-fixed-position");
+    orderSummaryBtn.style.display = "inline-block";
     shipmentPay(mainContentContainer);
     const paymentTotalPrice = document.querySelector(".pay-total-price span");
     paymentTotalPrice.textContent = "$" + subtotal;
@@ -57,7 +73,6 @@ paymentBtn.addEventListener("click", function (e) {
         paymentTotalPrice.textContent = "$" + updatedPrice.toFixed(2);
       })
     );
-    shipContainer.style.position = "static";
 
     textInterval = switchText(
       shipText,
@@ -72,7 +87,8 @@ paymentBtn.addEventListener("click", function (e) {
       mainContentContainer.innerHTML = "";
       clearInterval(textInterval);
       shipText.textContent = "";
-      shipContainer.style.position = "fixed";
+      shipContainer.classList.toggle("ship-fixed-position");
+      orderSummaryBtn.style.display = "none";
       moveShip.style.transform = "translateX(25.5rem)";
       orderSummary.style.transform = "translateX(102%)";
       main.style.backgroundColor = "#fdffe8";
@@ -83,7 +99,7 @@ paymentBtn.addEventListener("click", function (e) {
           ["Finished!", "Order Successful"],
           5000
         );
-        shipContainer.style.position = "static";
+        shipContainer.classList.toggle("ship-fixed-position");
 
         checkoutComplete(mainContentContainer);
         orderSummary.style.display = "none";

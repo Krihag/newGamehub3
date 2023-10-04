@@ -38,6 +38,6 @@ export default function summaryItem(game, container) {
   itemContent.appendChild(quantityAndPrice);
   cartItem.appendChild(itemImage);
   cartItem.appendChild(itemContent);
-
-  container.append(cartItem);
+  return cartItem;
+  // container.append(cartItem);
 }

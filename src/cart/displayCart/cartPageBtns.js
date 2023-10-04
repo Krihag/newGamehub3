@@ -16,19 +16,5 @@ export default function cartPageBtns(page) {
 
   container.append(prevPage, pageNumb, nextPage);
 
-  //   nextPage.addEventListener("click", function (e) {
-  //     e.preventDefault();
-  //     pageNumb.textContent = page;
-  //     const oldPage = e.target.parentElement.parentElement;
-  //   });
-
-  //   prevPage.addEventListener("click", function (e) {
-  //     e.preventDefault();
-  //     if (page > 1) {
-  //       pageNumb.textContent = page;
-  //       const oldPage = e.target.parentElement.parentElement;
-  //       oldPage.style.display = "none";
-  //     }
-  //   });
   return container;
 }
