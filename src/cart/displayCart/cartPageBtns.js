@@ -12,7 +12,6 @@ export default function cartPageBtns(page) {
   const nextPage = document.createElement("button");
   nextPage.textContent = " > ";
   nextPage.classList.add("next-btn");
-  console.log(page);
 
   container.append(prevPage, pageNumb, nextPage);
 

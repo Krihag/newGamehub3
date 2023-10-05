@@ -25,14 +25,17 @@ footerBtn.addEventListener("click", function (e) {
   footerBtn.style.transition = ".5s ease-in";
 });
 hamburgerMenu();
+displayCart();
 
-if (gamesPrevAdded && gamesPrevAdded.length >= 1) {
-  displayCart();
-}
+// SEARCH BAR
+
+const url = window.location.href;
+const indexPage = url.includes("index.html");
 
 const searchItems = games.map((game) => {
   const container = document.createElement("a");
-  container.href = `description.html?id=${game.id}`;
+  const gameDescript = `description.html?id=${game.id}`;
+  container.href = indexPage ? "html/" + gameDescript : gameDescript;
   container.dataset.name = game.title.toLowerCase();
   container.classList.add("search-item");
   container.textContent = `${game.title.split(" ").slice(0, 2).join(" ")} - 

@@ -1,5 +1,9 @@
 import updateCart from "./updateCart.js";
 
+const cartOpen = document.querySelector(".cart-open");
+const cartClose = document.querySelector(".cart-close");
+const fullCartContainer = document.querySelector(".cart-container");
+
 export default function cartItem(item) {
   const cartItemDiv = document.createElement("div");
   cartItemDiv.classList.add("cart-item");
@@ -47,8 +51,12 @@ export default function cartItem(item) {
     e.preventDefault();
     item.quantity--;
     updateCart(item);
-    if (item.quantity <= 0) cartItemDiv.remove();
-    else {
+    if (item.quantity <= 0) {
+      cartItemDiv.remove();
+      cartClose.classList.add("display-icon");
+      cartOpen.classList.remove("display-icon");
+      fullCartContainer.classList.add("cart-visibility");
+    } else {
       itemQty.textContent = item.quantity;
       itemTotal = (item.quantity * item.price).toFixed(2);
       totalPrice.textContent = `$${itemTotal}`;

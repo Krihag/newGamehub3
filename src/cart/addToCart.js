@@ -1,5 +1,5 @@
 import updateCart from "./updateCart.js";
-import displayNewItem from "./displayNewItem.js";
+import cartPages from "./displayCart/cartPages.js";
 
 export default function addToCart(game, quantity = 1) {
   const getPrevGames = localStorage.getItem("cartItems");
@@ -44,8 +44,4 @@ export default function addToCart(game, quantity = 1) {
     itemsInCart = [...gamesPrevAdded, newItem];
   }
   localStorage.setItem("cartItems", JSON.stringify(itemsInCart));
-
-  if (newItem) {
-    displayNewItem(newItem, itemsInCart);
-  }
 }

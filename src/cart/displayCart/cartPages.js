@@ -31,7 +31,6 @@ export default function cartPages(allItems, container, perPage = 3) {
     }
 
     curPage.prepend(item);
-    console.log(pageNumber);
     index++;
   });
 

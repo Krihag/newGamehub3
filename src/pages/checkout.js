@@ -18,6 +18,7 @@ const subTotalContainer = document.querySelector(".subtotal-price");
 const totalPriceContainer = document.querySelector(".total-price");
 const shipPrice = document.querySelector(".shipping-price");
 const orderSummaryBtn = document.querySelector(".display-order-summary-btn");
+const hideOrderSummary = document.querySelector(".hide-order-summary-btn");
 
 const getPrevGames = localStorage.getItem("cartItems");
 const cartGames = JSON.parse(getPrevGames);
@@ -38,17 +39,22 @@ if (window.innerWidth < 1100) {
 orderSummaryBtn.addEventListener("click", function (e) {
   e.preventDefault();
   orderSummary.style.display = "block";
-  orderSummaryBtn.style.background = "#f89a9a";
-  orderSummaryBtn.textContent = "Hide order summary";
+  orderSummaryBtn.classList.toggle("hide-element");
+  hideOrderSummary.classList.toggle("hide-element");
 });
-
+hideOrderSummary.addEventListener("click", function (e) {
+  e.preventDefault();
+  orderSummary.style.display = "none";
+  orderSummaryBtn.classList.toggle("hide-element");
+  hideOrderSummary.classList.toggle("hide-element");
+});
 paymentBtn.addEventListener("click", function (e) {
   e.preventDefault();
   clearInterval(textInterval);
   shipText.textContent = "";
   mainContentContainer.innerHTML = "";
   shipContainer.classList.toggle("ship-fixed-position");
-  orderSummaryBtn.style.display = "none";
+  orderSummaryBtn.classList.toggle("hide-element");
 
   moveShip.style.transform = "translateX(12.5rem)";
   main.style.backgroundColor = "#FFCDF1";
@@ -59,7 +65,7 @@ paymentBtn.addEventListener("click", function (e) {
 
   setTimeout(() => {
     shipContainer.classList.toggle("ship-fixed-position");
-    orderSummaryBtn.style.display = "inline-block";
+    orderSummaryBtn.classList.toggle("hide-element");
     shipmentPay(mainContentContainer);
     const paymentTotalPrice = document.querySelector(".pay-total-price span");
     paymentTotalPrice.textContent = "$" + subtotal;
@@ -88,7 +94,7 @@ paymentBtn.addEventListener("click", function (e) {
       clearInterval(textInterval);
       shipText.textContent = "";
       shipContainer.classList.toggle("ship-fixed-position");
-      orderSummaryBtn.style.display = "none";
+      orderSummaryBtn.classList.toggle("hide-element");
       moveShip.style.transform = "translateX(25.5rem)";
       orderSummary.style.transform = "translateX(102%)";
       main.style.backgroundColor = "#fdffe8";

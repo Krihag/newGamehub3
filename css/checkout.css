@@ -334,8 +334,12 @@ input[type="radio"]:checked:after {
   font-size: 1.6rem;
 }
 
-.display-order-summary-btn {
+.order-summary-btn {
   display: none;
+}
+
+.hide-element {
+  visibility: hidden;
 }
 
 @media (max-width: 1100px) {
@@ -351,13 +355,13 @@ input[type="radio"]:checked:after {
     position: absolute;
     width: 100%;
     margin: 0 5%;
-    top: 20rem;
+    top: 19rem;
     align-content: center;
     justify-content: center;
     display: none;
   }
 
-  .display-order-summary-btn {
+  .order-summary-btn {
     position: absolute;
     top: 12rem;
     display: inline-block;
@@ -367,11 +371,18 @@ input[type="radio"]:checked:after {
     border: none;
     cursor: pointer;
     border-radius: 1rem;
-    background: rgba(163, 236, 76, 1);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-size: 1rem;
     z-index: 1;
     font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .display-order-summary-btn {
+    background: rgba(163, 236, 76, 1);
+  }
+
+  .hide-order-summary-btn {
+    background: #2d2267;
+    color: #fff;
   }
   .order-summary {
     gap: 0.3rem;
@@ -397,4 +408,7 @@ input[type="radio"]:checked:after {
     bottom: -2.5rem;
     left: 30%;
   }
+}
+
+@media (max-width: 600px) {
 }
