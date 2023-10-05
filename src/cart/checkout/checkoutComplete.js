@@ -29,8 +29,10 @@ export default function checkoutComplete(container) {
   button1.classList.add("pink-btn");
   button1.textContent = "Track order";
 
-  const button2 = document.createElement("button");
+  const button2 = document.createElement("a");
   button2.classList.add("button");
+  button2.style.background = "#FFF";
+  button2.href = `games.html`;
 
   button2.textContent = "Go to shop";
 
