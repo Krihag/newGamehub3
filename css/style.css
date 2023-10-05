@@ -52,15 +52,18 @@ main {
 }
 .pink-btn {
   border: none;
-  background: #ec4ca3;
+  background: #f365b3;
 }
-
+.pink-btn:hover {
+  background: #fc7ac1;
+  transition: 0.6s;
+}
 .semi-bold {
   font-weight: 600;
 }
 
 .pink-bottom-border {
-  border-bottom: 3px solid #ec4ca3;
+  border-bottom: 3px solid #f365b3;
 }
 
 header,
@@ -234,7 +237,7 @@ header nav input {
   height: 5rem;
   border-radius: 50%;
   /* background: linear-gradient(to left, #cf17cf, #ec4c7f, #d33db0); */
-  background: #ec4ca3;
+  background: #f365b3;
   color: #251a57;
   font-weight: 800;
   text-transform: uppercase;
