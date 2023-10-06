@@ -17,17 +17,16 @@ export default function chat() {
 
   chatBot();
   // const bots = chatBot()
-  const hans = {
-    name: "Hans",
-    firstText: "I am not interested in talking to you Human. Begone!",
-    secondText: "I am warning you, do not talk to me.. I will bite!",
+  const lisa = {
+    name: "Lisa",
+    firstText: "Hello. What can I help you with?",
+    secondText: "",
 
     bites: function () {},
     closeChat: false,
   };
   const namesArray = [
-    hans, // 0
-    "Lisa", // 1
+    lisa, // 0
   ];
 
   const randomNumber = Math.floor(Math.random() * namesArray.length);

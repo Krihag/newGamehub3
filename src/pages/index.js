@@ -10,6 +10,7 @@ const [bestSellers, newGamesContainer] = document.querySelectorAll(
   ".bestseller-container"
 );
 const articleSlides = document.querySelectorAll(".article-slide");
+const loader = document.querySelector(".loader-container");
 
 let x = 0;
 let y = 0;
@@ -118,3 +119,4 @@ const mainHeader = document.querySelector(".main-header");
 // cartIcon.addEventListener("click", (e) => {
 //   mainHeader.classList.toggle("index-header");
 // });
+loader.remove();

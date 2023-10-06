@@ -8,6 +8,7 @@ const sliderContainer = document.querySelector(".all-slides-container");
 const gamesContainer = document.querySelector(".games-container");
 const gameCategory = document.querySelector("#game-category");
 const categoryHeader = document.querySelector(".category-header");
+const loader = document.querySelector(".loader-container");
 
 const games = await fetchGames();
 
@@ -204,3 +205,4 @@ rightArrow.addEventListener("click", (e) => {
   updateCharacters(oldChar);
   updateCharacters(newChar);
 });
+loader.remove();

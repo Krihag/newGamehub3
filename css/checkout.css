@@ -377,11 +377,11 @@ input[type="radio"]:checked:after {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   .display-order-summary-btn {
-    background: rgba(163, 236, 76, 1);
+    background: #dd95f8;
   }
 
   .hide-order-summary-btn {
-    background: #2d2267;
+    background: #76388d;
     color: #fff;
   }
   .order-summary {
