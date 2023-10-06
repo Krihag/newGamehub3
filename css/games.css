@@ -87,8 +87,7 @@ header {
 .slide-new-price {
   color: #ec4ca3;
 }
-.slide-description {
-}
+
 .slider-btns {
   display: flex;
   gap: 0.5rem;
@@ -169,8 +168,8 @@ h3,
   font-weight: 550;
   padding: 0.8rem 1rem;
   border-radius: 0.2rem;
-  list-style: armenian;
-  /* background: linear-gradient(to left, #ff94ce, #f167b2, #ec4ca3); */
+  list-style: none;
+
   background: none;
   border: none;
   border-bottom: 3px solid #ec4ca3;

@@ -1,50 +1,52 @@
 .game-description-section {
-  background: #9163de;
+  background: #ebdfff;
 
   font-family: "DM Sans", sans-serif;
 }
 
 .description-top-half {
-  background: url("../img/game-details-background.jpg") no-repeat;
+  /* background: url("../img/game-details-background.jpg") no-repeat; */
   min-height: 80vh;
   background-size: initial;
-
-  height: 100%;
-  padding: 10rem 0 0;
 }
 
 .image-and-details {
-  width: 900px;
-  max-width: 90%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+
   /* align-items: center; */
-  gap: 4rem;
+  gap: 6rem;
+  width: 100%;
+  justify-content: center;
 }
 
 .game-img {
   max-width: 350px;
-  transform: rotate(-6deg);
+  /* transform: rotate(-6deg); */
   /* border: 6px solid #3fa535; */
   border-radius: 0.5rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  align-self: center;
 }
 
 .header-details {
+  justify-self: end;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 320px;
+  height: 100%;
   font-size: 1.3rem;
   gap: 1rem;
+  width: 50%;
+  padding: 10rem 0;
 }
 .header-text {
   font-size: 2.2rem;
 }
 .header-description {
   line-height: 1.8rem;
+  width: 320px;
 }
 
 .header-details button {
@@ -124,7 +126,7 @@
   }
   .image-and-details {
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 4rem;
   }
   .image-and-details img {

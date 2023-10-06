@@ -20,7 +20,8 @@ export default function chat() {
   const lisa = {
     name: "Lisa",
     firstText: "Hello. What can I help you with?",
-    secondText: "",
+    secondText:
+      "Sorry, we are not able to help with that over chat. My colleague will call you within 5-10 minutes to help with this",
 
     bites: function () {},
     closeChat: false,
