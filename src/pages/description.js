@@ -30,23 +30,18 @@ const gameDescription = document.createElement("p");
 gameDescription.classList.add("header-description");
 gameDescription.textContent = game.description;
 
-const genreAndPrice = document.createElement("div");
-genreAndPrice.classList.add("genre-and-price");
-
-const genreHeader = document.createElement("p");
-genreHeader.classList.add("genre-header");
-genreHeader.classList.add("semi-bold");
-genreHeader.textContent = "Genre: ";
-const genreSpan = document.createElement("span");
-genreSpan.textContent = game.genre;
-
-const priceHeader = document.createElement("p");
-priceHeader.classList.add("price-header");
-priceHeader.classList.add("semi-bold");
-priceHeader.textContent = "Price: ";
-
-const priceSpan = document.createElement("span");
-priceSpan.textContent = `$${game.price}`;
+const priceContainer = document.createElement("div");
+priceContainer.classList.add("price-container");
+const price = document.createElement("p");
+price.classList.add("game-price");
+price.textContent = "$" + game.discountedPrice;
+if (game.onSale) {
+  const oldPrice = document.createElement("p");
+  oldPrice.classList.add("game-old-price");
+  oldPrice.textContent = "$" + game.price;
+  priceContainer.appendChild(oldPrice);
+}
+priceContainer.appendChild(price);
 
 const quantityContainer = document.createElement("div");
 quantityContainer.classList.add("quantity-container");
@@ -71,7 +66,7 @@ totalPriceContainer.classList.add("semi-bold");
 totalPriceContainer.textContent = "Total: ";
 
 const totalPrice = document.createElement("span");
-totalPrice.textContent = "$" + game.price;
+totalPrice.textContent = "$" + game.discountedPrice;
 
 const addToCartBtn = document.createElement("button");
 addToCartBtn.classList.add("button");
@@ -87,16 +82,13 @@ imageAndDetails.append(gameImg, headerDetails);
 
 headerDetails.append(
   headerText,
+  priceContainer,
   gameDescription,
-  genreAndPrice,
+
   quantityContainer,
   totalPriceContainer,
   addToCartBtn
 );
-
-genreAndPrice.append(genreHeader, priceHeader);
-genreHeader.append(genreSpan);
-priceHeader.append(priceSpan);
 
 changeQuantity.append(decreaseBtn, itemQty, increaseBtn);
 quantityContainer.append(quantityText, changeQuantity);
@@ -104,7 +96,7 @@ quantityContainer.append(quantityText, changeQuantity);
 increaseBtn.addEventListener("click", function (e) {
   e.preventDefault();
   itemQty.textContent++;
-  const updatedTotal = game.price * itemQty.textContent;
+  const updatedTotal = game.discountedPrice * itemQty.textContent;
   totalPrice.textContent = "$" + updatedTotal.toFixed(2);
 });
 
@@ -113,7 +105,7 @@ decreaseBtn.addEventListener("click", function (e) {
   if (itemQty.textContent > 1) {
     itemQty.textContent--;
 
-    const updatedTotal = game.price * itemQty.textContent;
+    const updatedTotal = game.discountedPrice * itemQty.textContent;
     totalPrice.textContent = "$" + updatedTotal.toFixed(2);
     console.log("test");
   }
