@@ -76,7 +76,7 @@ addToCartBtn.textContent = "Add to cart";
 
 totalPriceContainer.append(totalPrice);
 
-gameContainer.append(container);
+gameContainer.prepend(container);
 container.append(imageAndDetails);
 imageAndDetails.append(gameImg, headerDetails);
 
