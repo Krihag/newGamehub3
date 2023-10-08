@@ -339,6 +339,12 @@ h3,
   border: 2px solid #ebdfff;
 }
 
+@media (max-width: 1600px) {
+  .category-container {
+    max-width: 660px;
+  }
+}
+
 @media (max-width: 1300px) {
   .cyberpunk-section {
     flex-direction: column;

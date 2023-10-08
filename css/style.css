@@ -277,6 +277,11 @@ header nav input {
   line-height: 1.2rem;
 }
 
+.game-genre {
+  text-transform: none;
+  color: #ebdfffb5;
+}
+
 .old-price {
   text-decoration: line-through;
   font-size: 90%;
@@ -362,6 +367,10 @@ footer {
   font-family: "Raleway", sans-serif;
   text-transform: none;
   color: #ebdfff;
+}
+
+.footer-contact p {
+  font-family: "DM Sans", sans-serif;
 }
 
 .footer-header {
@@ -466,7 +475,7 @@ footer {
 
 @media (max-width: 1600px) {
   .games-section > * {
-    max-width: 680px;
+    max-width: 670px;
     width: 100%;
   }
 }

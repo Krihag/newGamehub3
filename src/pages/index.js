@@ -44,7 +44,7 @@ if (window.innerWidth >= 725) {
   main.style.maxHeight = `${window.innerWidth * 0.6}px`;
 } else {
   main.style.maxHeight = `${window.innerWidth * 1.4}px`;
-  backgroundImg.src = "../img/background-mobile.jpg";
+  // backgroundImg.src = "../img/background-mobile.jpg";
 }
 
 // TRENDING GAMES

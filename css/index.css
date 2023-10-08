@@ -227,9 +227,6 @@ section {
     justify-content: center;
     gap: 1.2rem;
   }
-  .bestsellers-section > * {
-    max-width: 680px;
-  }
 }
 
 /* CART */
