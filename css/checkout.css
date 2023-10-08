@@ -453,6 +453,10 @@ input[type="radio"]:checked:after {
   .order-btn-container {
     flex-direction: column;
   }
+
+  .payment-form {
+    margin-top: 2rem;
+  }
 }
 @media (max-width: 400px) {
   .personal-info-section {

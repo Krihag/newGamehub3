@@ -153,10 +153,13 @@ header nav input {
 /* SEARCH BAR */
 .search-bar {
   position: relative;
+  font-size: 1rem;
+  padding: 0.6rem 0;
+  border: none;
 }
 .search-list {
   position: absolute;
-  top: 2.3rem;
+  top: 3rem;
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -628,6 +631,10 @@ footer {
 
   header .search-bar {
     top: 11rem;
+  }
+
+  .search-list {
+    top: 13.3rem;
   }
   .email-subscribe button {
     width: 100%;
