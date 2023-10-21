@@ -13,8 +13,11 @@ export default function updateCart(item) {
     }
     localStorage.setItem("cartItems", JSON.stringify(gamesPrevAdded));
     const totalSum = gamesPrevAdded.reduce((acc, cur) => {
-      const itemSum = cur.price * cur.quantity;
-      return acc + itemSum;
+      if (cur.price) {
+        const itemSum = cur.price * cur.quantity;
+        return acc + itemSum;
+      }
+      // else const itemsum = cur.prices.sale_price * cur.quantity;
     }, 0);
 
     localStorage.setItem("totalCart", totalSum);

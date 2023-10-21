@@ -36,9 +36,9 @@ const searchItems = games.map((game) => {
   const container = document.createElement("a");
   const gameDescript = `description.html?id=${game.id}`;
   container.href = indexPage ? "html/" + gameDescript : gameDescript;
-  container.dataset.name = game.title.toLowerCase();
+  container.dataset.name = game.name.toLowerCase();
   container.classList.add("search-item");
-  container.textContent = `${game.title.split(" ").slice(0, 2).join(" ")} - 
+  container.textContent = `${game.name.split(" ").slice(0, 2).join(" ")} - 
    ${game.genre}`;
   container.style.display = "none";
 

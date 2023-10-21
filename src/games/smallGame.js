@@ -5,8 +5,8 @@ export default function smallGame(game, container, homePage = false) {
   else gameContainer.href = `description.html?id=${game.id}`;
 
   const gameImg = document.createElement("img");
-  gameImg.src = game.image;
-  gameImg.alt = game.description;
+  gameImg.src = game.images[0].src;
+  gameImg.alt = game.attributes[4].terms[0].name;
 
   const gameContent = document.createElement("div");
   gameContent.classList.add("game-content");
@@ -16,7 +16,7 @@ export default function smallGame(game, container, homePage = false) {
   const nameAndGenre = document.createElement("div");
   nameAndGenre.classList.add("name-and-genre");
 
-  const newName = game.title.split(" ").slice(0, 2).join(" ");
+  const newName = game.name.split(" ").slice(0, 2).join(" ");
 
   const name = document.createElement("h4");
   name.classList.add("game-name");
@@ -24,27 +24,34 @@ export default function smallGame(game, container, homePage = false) {
 
   const genre = document.createElement("p");
   genre.classList.add("game-genre");
-  genre.textContent = game.genre;
+  genre.textContent = game.attributes[0].terms[0].name;
 
   nameAndGenre.append(name, genre);
 
   const priceContainer = document.createElement("div");
+
+  const priceNow = Number(game.prices.sale_price / 100);
+  const oldPrice = Number(game.prices.regular_price / 100);
+
   priceContainer.classList.add("price");
-  if (game.onSale) {
+  if (game.on_sale) {
     gameContainer.classList.add("on-sale");
     const originalPrice = document.createElement("p");
     originalPrice.classList.add("old-price");
-    originalPrice.textContent = `$${game.price}`;
+
+    // const price = Number(game.prices)
+
+    originalPrice.textContent = `$${oldPrice}`;
     priceContainer.append(originalPrice);
 
-    const percentage = 1 - game.discountedPrice / game.price;
+    const percentage = 1 - priceNow / oldPrice;
     const discount = `-${(percentage * 100).toFixed(0)}%`;
     gameContainer.setAttribute("data-before", discount);
   }
   const discountPrice = document.createElement("p");
   discountPrice.classList.add("price-tag");
   priceContainer.append(discountPrice);
-  discountPrice.textContent = `$${game.discountedPrice}`;
+  discountPrice.textContent = `$${priceNow}`;
 
   gameContent.append(nameAndGenre, priceContainer);
   container.append(gameContainer);

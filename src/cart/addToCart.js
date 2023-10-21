@@ -10,6 +10,8 @@ export default function addToCart(game, quantity = 1) {
 
   let newItem;
 
+  const priceNow = Number(game.prices.sale_price / 100);
+
   if (gamesPrevAdded) {
     const foundGame = gamesPrevAdded.find((curGame) => {
       if (curGame.id === game.id) {
@@ -20,14 +22,15 @@ export default function addToCart(game, quantity = 1) {
     if (foundGame) {
       console.log(quantity);
       foundGame.quantity += quantity;
+      console.log(foundGame);
       updateCart(foundGame);
     } else {
       newItem = {
         id: game.id,
         quantity: quantity,
-        name: game.title,
-        price: game.discountedPrice,
-        img: game.image,
+        name: game.name,
+        price: priceNow,
+        img: game.images[0].src,
         alt: game.description,
       };
       itemsInCart = [...gamesPrevAdded, newItem];
@@ -36,9 +39,9 @@ export default function addToCart(game, quantity = 1) {
     newItem = {
       id: game.id,
       quantity: quantity,
-      name: game.title,
-      price: game.discountedPrice,
-      img: game.image,
+      name: game.name,
+      price: priceNow,
+      img: game.images[0].src,
       alt: game.description,
     };
     itemsInCart = [...gamesPrevAdded, newItem];

@@ -10,9 +10,8 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const game = await fetchGames(id);
-
-console.log(game);
+const allGames = await fetchGames();
+const game = allGames.find((game) => game.id == id);
 
 // display game
 const container = document.createElement("article");
@@ -25,28 +24,31 @@ const imgContainer = document.createElement("div");
 imgContainer.classList.add("img-container");
 const gameImg = document.createElement("img");
 gameImg.classList.add("game-img");
-gameImg.src = game.image;
+gameImg.src = game.images[0].src;
 
 const headerDetails = document.createElement("div");
 headerDetails.classList.add("header-details");
 
 const headerText = document.createElement("h1");
 headerText.classList.add("header-text");
-headerText.textContent = game.title;
+headerText.textContent = game.name;
 
 const gameDescription = document.createElement("p");
 gameDescription.classList.add("header-description");
-gameDescription.textContent = game.description;
+gameDescription.textContent = game.attributes[4].terms[0].name;
+
+const priceNow = Number(game.prices.sale_price / 100);
+const regPrice = Number(game.prices.regular_price / 100);
 
 const priceContainer = document.createElement("div");
 priceContainer.classList.add("price-container");
 const price = document.createElement("p");
 price.classList.add("game-price");
-price.textContent = "$" + game.discountedPrice;
+price.textContent = "$" + priceNow;
 if (game.onSale) {
   const oldPrice = document.createElement("p");
   oldPrice.classList.add("game-old-price");
-  oldPrice.textContent = "$" + game.price;
+  oldPrice.textContent = "$" + regPrice;
   priceContainer.appendChild(oldPrice);
   imgContainer.classList.add("game-on-sale");
 }
@@ -75,7 +77,7 @@ totalPriceContainer.classList.add("semi-bold");
 totalPriceContainer.textContent = "Total: ";
 
 const totalPrice = document.createElement("span");
-totalPrice.textContent = "$" + game.discountedPrice;
+totalPrice.textContent = "$" + priceNow;
 
 const addToCartBtn = document.createElement("button");
 addToCartBtn.classList.add("button");
@@ -106,7 +108,7 @@ quantityContainer.append(quantityText, changeQuantity);
 increaseBtn.addEventListener("click", function (e) {
   e.preventDefault();
   itemQty.textContent++;
-  const updatedTotal = game.discountedPrice * itemQty.textContent;
+  const updatedTotal = priceNow * itemQty.textContent;
   totalPrice.textContent = "$" + updatedTotal.toFixed(2);
 });
 
@@ -115,7 +117,7 @@ decreaseBtn.addEventListener("click", function (e) {
   if (itemQty.textContent > 1) {
     itemQty.textContent--;
 
-    const updatedTotal = game.discountedPrice * itemQty.textContent;
+    const updatedTotal = priceNow * itemQty.textContent;
     totalPrice.textContent = "$" + updatedTotal.toFixed(2);
     console.log("test");
   }
@@ -131,24 +133,24 @@ addToCartBtn.addEventListener("click", function (e) {
 
 // Game description -Specifications
 
-document.querySelector(".spec-genre span").textContent = game.genre;
-document.querySelector(".spec-publisher span").textContent = game.tags[0];
-document.querySelector(".spec-age span").textContent = game.ageRating;
-document.querySelector(".spec-release span").textContent = game.released;
+document.querySelector(".spec-genre span").textContent =
+  game.attributes[0].terms[0].name;
+document.querySelector(".spec-publisher span").textContent =
+  game.attributes[3].terms[0].name;
+document.querySelector(".spec-age span").textContent =
+  game.attributes[2].terms[0].name;
+document.querySelector(".spec-release span").textContent =
+  game.attributes[1].terms[0].name;
 
 // Suggested games
-
-const allGames = await fetchGames();
-
-const randomNumber = Math.floor(Math.random() * allGames.length);
 
 const suggestedGames = [];
 
 function randomGame(games, container, game) {
   const curGame = games[Math.floor(Math.random() * games.length)];
   if (
-    curGame.title === game.title ||
-    container.find((item) => item.title === curGame.title)
+    curGame.name === game.name ||
+    container.find((item) => item.name === curGame.name)
   ) {
     randomGame(games, container, game);
   } else {

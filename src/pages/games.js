@@ -12,9 +12,9 @@ const loader = document.querySelector(".loader-container");
 
 const games = await fetchGames();
 
-const boxer = games.find((game) => game.title == "Boxer");
-let spaceWar = games.find((game) => game.title == "Space War");
-let assassin = games.find((game) => game.title == "Assassin");
+const boxer = games.find((game) => game.name == "Boxer");
+let spaceWar = games.find((game) => game.name == "Space War");
+let assassin = games.find((game) => game.name == "Assassin");
 
 const sliderGames = [boxer, spaceWar, assassin];
 
@@ -30,7 +30,7 @@ const allSlides = sliderGames.map((game, i) => {
   slideMainContainer.appendChild(slideSubContainer);
 
   const gameImg = document.createElement("img");
-  gameImg.src = game.image;
+  gameImg.src = game.images[0].src;
   gameImg.classList.add("slide-image");
 
   const contentContainer = document.createElement("div");
@@ -39,18 +39,21 @@ const allSlides = sliderGames.map((game, i) => {
 
   const header = document.createElement("h2");
   header.classList.add("slide-title");
-  header.textContent = game.title;
+  header.textContent = game.name;
 
   const priceContainer = document.createElement("div");
   priceContainer.classList.add("slide-price-container");
 
+  const priceNow = Number(game.prices.sale_price / 100);
+  const regPrice = Number(game.prices.regular_price / 100);
+
   const newPrice = document.createElement("p");
-  newPrice.textContent = "$" + game.discountedPrice;
+  newPrice.textContent = "$" + priceNow;
   newPrice.classList.add("slide-new-price");
 
-  if (game.onSale) {
+  if (game.on_sale) {
     const oldPrice = document.createElement("p");
-    oldPrice.textContent = "$" + game.price;
+    oldPrice.textContent = "$" + regPrice;
     priceContainer.appendChild(oldPrice);
     oldPrice.classList.add("slide-old-price");
   }
@@ -58,9 +61,7 @@ const allSlides = sliderGames.map((game, i) => {
 
   const descript = document.createElement("p");
   descript.classList.add("slide-description");
-  descript.textContent =
-    game.description +
-    " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+  descript.textContent = game.attributes[4].terms[0].name;
 
   const buttons = document.createElement("div");
   buttons.classList.add("slider-btns");
@@ -122,14 +123,14 @@ gameCategory.addEventListener("change", function (e) {
   gamesContainer.innerHTML = "";
   games.forEach((game) => {
     if (category === "all") smallGame(game, gamesContainer);
-    else if (game.genre.toLowerCase() === category)
+    else if (game.attributes[0].terms[0].name.toLowerCase() === category)
       smallGame(game, gamesContainer);
   });
   categoryHeader.textContent = `${category} games`;
 });
 
 // CYBERPUNK GAME CHARACTERS
-const cyberpunkGame = games.find((game) => game.title === "Cyberpunk");
+const cyberpunkGame = games.find((game) => game.name === "Cyberpunk");
 
 const leftArrow = document.getElementById("arrow-left");
 const rightArrow = document.getElementById("arrow-right");

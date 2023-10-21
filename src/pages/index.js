@@ -66,13 +66,11 @@ rightBtns.forEach((btn) =>
   btn.addEventListener("click", function (e) {
     i++;
     slidesContainer.style.transform = `translateX(${-33.334 * i}%)`;
-
-    console.log(e.target.parentElement.parentElement);
   })
 );
-const forge = games.find((game) => game.title == "Forge Legend");
-const racing = games.find((game) => game.title == "Racing");
-const cyberPunk = games.find((game) => game.title == "Cyberpunk");
+const forge = games.find((game) => game.name == "Forge Legends");
+const racing = games.find((game) => game.name == "Racing");
+const cyberPunk = games.find((game) => game.name == "Cyberpunk");
 
 const featuredGames = [forge, racing, cyberPunk];
 
@@ -80,13 +78,14 @@ articleSlides.forEach((slide, i) => {
   slide.dataset.id = featuredGames[i].id;
   slide.querySelector("h3").textContent = featuredGames[i].title;
   slide.querySelector(".article-description").textContent =
-    featuredGames[i].description;
-  slide.querySelector(".article-genre").textContent = featuredGames[i].genre;
+    featuredGames[i].attributes[4].terms[0].name;
+  slide.querySelector(".article-genre").textContent =
+    featuredGames[i].attributes[0].terms[0].name;
   slide.querySelector(".article-release").textContent =
-    featuredGames[i].released;
-  slide.querySelector(
-    ".article-price"
-  ).textContent = `$${featuredGames[i].discountedPrice}`;
+    featuredGames[i].attributes[1].terms[0].name;
+
+  const priceNow = Number(featuredGames[i].prices.sale_price / 100);
+  slide.querySelector(".article-price").textContent = `$${priceNow}`;
 });
 
 // BESTSELLERS
