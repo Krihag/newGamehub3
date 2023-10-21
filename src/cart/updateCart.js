@@ -1,4 +1,5 @@
 const totalPriceContainer = document.querySelector(".cart-total span");
+const cartItems = document.querySelector(".cart-open");
 
 export default function updateCart(item) {
   const getPrevGames = localStorage.getItem("cartItems");
@@ -17,8 +18,15 @@ export default function updateCart(item) {
         const itemSum = cur.price * cur.quantity;
         return acc + itemSum;
       }
+
       // else const itemsum = cur.prices.sale_price * cur.quantity;
     }, 0);
+
+    const totalItems = gamesPrevAdded.reduce((acc, cur) => {
+      return acc + Number(cur.quantity);
+    }, 0);
+
+    cartItems.style.setProperty("--cart-content", "'" + totalItems + "'");
 
     localStorage.setItem("totalCart", totalSum);
     totalPriceContainer.textContent = "$" + totalSum.toFixed(2);

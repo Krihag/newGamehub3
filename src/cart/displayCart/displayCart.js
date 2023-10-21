@@ -15,18 +15,19 @@ export default function displayCart() {
   const getPrevGames = localStorage.getItem("cartItems");
   let gamesPrevAdded = JSON.parse(getPrevGames);
 
-  const cartItemsList = gamesPrevAdded.map((game) => cartItem(game));
+  if (gamesPrevAdded) {
+    const cartItemsList = gamesPrevAdded.map((game) => cartItem(game));
 
-  cartPages(cartItemsList, cartItemsContainer);
+    cartPages(cartItemsList, cartItemsContainer);
 
-  const totalSum = gamesPrevAdded.reduce((acc, cur) => {
-    const itemSum = cur.price * cur.quantity;
-    return acc + itemSum;
-  }, 0);
-  totalPriceContainer.textContent = "$" + totalSum.toFixed(2);
+    const totalSum = gamesPrevAdded.reduce((acc, cur) => {
+      const itemSum = cur.price * cur.quantity;
+      return acc + itemSum;
+    }, 0);
+    totalPriceContainer.textContent = "$" + totalSum.toFixed(2);
 
-  localStorage.setItem("totalCart", totalSum);
-
+    localStorage.setItem("totalCart", totalSum);
+  }
   cartIcon.addEventListener("click", function (e) {
     e.preventDefault();
     const getPrevGames = localStorage.getItem("cartItems");

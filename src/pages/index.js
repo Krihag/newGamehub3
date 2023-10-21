@@ -76,7 +76,7 @@ const featuredGames = [forge, racing, cyberPunk];
 
 articleSlides.forEach((slide, i) => {
   slide.dataset.id = featuredGames[i].id;
-  slide.querySelector("h3").textContent = featuredGames[i].title;
+  slide.querySelector("h3").textContent = featuredGames[i].name;
   slide.querySelector(".article-description").textContent =
     featuredGames[i].attributes[4].terms[0].name;
   slide.querySelector(".article-genre").textContent =
@@ -107,15 +107,10 @@ addToCartBtn.forEach((btn) => {
     const target =
       e.target.parentElement.parentElement.parentElement.parentElement;
     const id = target.dataset.id;
-    const foundGame = games.find((game) => game.id === id);
+    const foundGame = games.find((game) => Number(game.id) === Number(id));
+
     addToCart(foundGame);
   });
 });
 
-const cartIcon = document.querySelector(".shopping-cart-icon");
-const mainHeader = document.querySelector(".main-header");
-
-// cartIcon.addEventListener("click", (e) => {
-//   mainHeader.classList.toggle("index-header");
-// });
 loader.remove();

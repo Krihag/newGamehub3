@@ -2,7 +2,7 @@ const character1 = {
   name: "Blaise",
   id: 1,
   profession: "Gunner",
-  description: `Introducing Blaise, the Gunner extraordinaire! Armed with a sleek and futuristic firearm, Blaise showers foes in a mesmerizing cascade of pink fire bolts, turning every battle into a dazzling spectacle of destruction and chaos.`,
+  description: `Introducing Blaise, the Gunner extraordinaire! Armed with a sleek and futuristic firearm, Blaise showers foes in a mesmerizing cascade of pink fire bolts, turning every battle into a dazzling spectacle of destruction and chaos. In the midst of the chaos, Blaise reigns supreme.`,
   className: "neon-pink",
   btnColor: "#fa67ac",
   active: true,

@@ -191,23 +191,25 @@ main {
   font-size: 2rem;
 }
 .header-description {
-  width: 350px;
+  width: 500px;
 }
-.genre-and-price {
-  max-width: 350px;
-}
+
 .header-details button {
-  width: 250px;
+  width: 350px;
 }
 
 .descript-quantity-container,
 .total-price-container {
   display: flex;
-  /* justify-content: space-between; */
-  max-width: 250px;
+  justify-content: space-between;
+  max-width: 300px;
   align-items: center;
   gap: 2rem;
   font-size: 1.4rem;
+}
+
+.descript-quantity-container {
+  max-width: 350px;
 }
 
 .quantity-container {
@@ -307,7 +309,7 @@ main {
 .suggested-section {
   padding: 10rem 5%;
 
-  background: #9163de;
+  background: #c7aaf9;
 }
 
 .suggested-container {

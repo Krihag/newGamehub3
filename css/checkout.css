@@ -23,7 +23,7 @@ main {
   justify-content: space-between;
   padding-left: 10%;
   color: #2d2267;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 .ship-full-container {
   top: 5rem;

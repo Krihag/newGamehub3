@@ -5,7 +5,7 @@ import fetchGames from "./games/fetchGames.js";
 const footerBtn = document.querySelector(".subscribe-button");
 const footerInput = document.querySelector(".footer-input");
 const newsText = document.querySelector(".newsletter-subtext");
-const cartIcon = document.querySelector(".shopping-cart-icon");
+const cartItems = document.querySelector(".cart-open");
 const searchInput = document.querySelector(".search-bar");
 const searchResult = document.querySelector("#list");
 
@@ -13,6 +13,14 @@ const games = await fetchGames();
 
 const getPrevGames = localStorage.getItem("cartItems");
 let gamesPrevAdded = JSON.parse(getPrevGames);
+if (gamesPrevAdded && gamesPrevAdded.length > 0) {
+  const totalItems = gamesPrevAdded.reduce((acc, cur) => {
+    return acc + Number(cur.quantity);
+  }, 0);
+
+  cartItems.classList.add("cart-number-items");
+  cartItems.style.setProperty("--cart-content", "'" + totalItems + "'");
+}
 
 footerBtn.addEventListener("click", function (e) {
   const inputVal = footerInput.value;
@@ -25,6 +33,7 @@ footerBtn.addEventListener("click", function (e) {
   footerBtn.style.transition = ".5s ease-in";
 });
 hamburgerMenu();
+
 displayCart();
 
 // SEARCH BAR
@@ -39,7 +48,7 @@ const searchItems = games.map((game) => {
   container.dataset.name = game.name.toLowerCase();
   container.classList.add("search-item");
   container.textContent = `${game.name.split(" ").slice(0, 2).join(" ")} - 
-   ${game.genre}`;
+   ${game.attributes[0].terms[0].name}`;
   container.style.display = "none";
 
   searchResult.appendChild(container);

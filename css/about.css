@@ -10,7 +10,8 @@ main {
   margin-left: auto;
   background-size: cover;
   font-size: 1.3rem;
-  min-height: 80vh;
+  height: 80vh;
+  min-height: 800px;
 }
 
 .about-us-text {
