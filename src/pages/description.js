@@ -10,13 +10,12 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const allGames = await fetchGames();
-const game = allGames.find((game) => game.id == id);
+const game = await fetchGames(`/${id}`);
 
 // display game
 const container = document.createElement("article");
 container.classList.add("description-top-half");
-
+`/${id}`;
 const imageAndDetails = document.createElement("div");
 imageAndDetails.classList.add("image-and-details");
 
@@ -157,7 +156,7 @@ function randomGame(games, container, game) {
     container.push(curGame);
   }
 }
-
+const allGames = await fetchGames();
 for (let i = 0; i < 4; i++) {
   randomGame(allGames, suggestedGames, game);
 }
