@@ -8,6 +8,7 @@ For the cross-course-project we could choose between 3 different briefs. Our tas
 
 Gamehub, a fictional online store selling video games, was one of the first real projects we started with at Noroff in our first year. In the first semester we created the website only using HTML and CSS. But we later came back to it in our 2nd semester where we would add Javascript to it and use wordpress as a headless CMS.
 
+
 ## Brief 
 
 We were first tasked to design and code the website using only HTML and CSS. In our 2nd semester we came back to this to add Javascript to it and also to use wordpress as a headless CMS
