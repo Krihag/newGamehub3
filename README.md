@@ -2,15 +2,21 @@
 
 ![gamehub-project (2) (1)](https://github.com/Krihag/newGamehub3/assets/125972171/1acd35fe-39b0-4540-9953-1645fe5ae465)
 
+For the cross-course-project we could choose between 3 different briefs. Our task was to first design it and then later code it.
+
 ## Description
 
 Gamehub, a fictional online store selling video games, was one of the first real projects we started with at Noroff in our first year. In the first semester we created the website only using HTML and CSS. But we later came back to it in our 2nd semester where we would add Javascript to it and use wordpress as a headless CMS.
 
-You can add some bullet points if you'd like to:
+## Brief 
 
-- List item 1
-- List item 2
-- List item 3
+We were first tasked to design and code the website using only HTML and CSS. In our 2nd semester we came back to this to add Javascript to it and also to use wordpress as a headless CMS
+
+**keypoints **
+- GameHub is an online shop where users can purchase computer games. 
+- This gaming marketplace lets you buy tons of video games online for any device.
+- GameHub is a competitively priced website with a huge range of games.
+
 
 ## Built With
 
@@ -20,6 +26,7 @@ You can list a the tech stack that you've used over here
 - CSS
 - Javascript
 - Wordpress
+- Figma
 
 ## Getting Started
 
