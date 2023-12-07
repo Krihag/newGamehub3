@@ -1,7 +1,6 @@
 # Gamehub
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png](https://i.ibb.co/q57qN19/gamehub-project-2-1.jpg)
-
+![image](https://i.ibb.co/q57qN19/gamehub-project-2-1.jpg)
 A simple overview of the use/purpose of the project.
 
 ## Description
