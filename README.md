@@ -13,7 +13,7 @@ Gamehub, a fictional online store selling video games, was one of the first real
 
 We were first tasked to design and code the website using only HTML and CSS. In our 2nd semester we came back to this to add Javascript to it and also to use wordpress as a headless CMS
 
-**keypoints **
+Keypoints:
 - GameHub is an online shop where users can purchase computer games. 
 - This gaming marketplace lets you buy tons of video games online for any device.
 - GameHub is a competitively priced website with a huge range of games.
