@@ -4,7 +4,7 @@
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+Gamehub is one of the first projects we started with in our first semester using HTML and CSS only and later coming back to it in the 2nd semester where we would add Javascript and use wordpress as a headless CMS
 
 You can add some bullet points if you'd like to:
 
