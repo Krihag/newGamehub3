@@ -4,7 +4,7 @@
 
 ## Description
 
-Gamehub was one of the first projects we started with in our first semester at Noroff, using HTML and CSS only and later coming back to it at our 2nd semester where we would add Javascript to it and use wordpress as a headless CMS
+Gamehub, a fictional online store selling video games, was one of the first real projects we started with at Noroff in our first year. In the first semester we created the website only using HTML and CSS. But we later came back to it in our 2nd semester where we would add Javascript to it and use wordpress as a headless CMS.
 
 You can add some bullet points if you'd like to:
 
